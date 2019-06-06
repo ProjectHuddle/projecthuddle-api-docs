@@ -1,0 +1,6494 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>ProjectHuddle Rest API</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#requirements" class="toc-h2 toc-link" data-title="Requirements">Requirements</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#obtaining-an-api-key-and-api-secret" class="toc-h2 toc-link" data-title="Obtaining an API Key and API Secret"><strong>Obtaining an API Key and API Secret</strong></a>
+                  </li>
+                  <li>
+                    <a href="#generating-a-json-web-token" class="toc-h2 toc-link" data-title="Generating a JSON Web Token"><strong>Generating a JSON Web Token</strong></a>
+                  </li>
+                  <li>
+                    <a href="#authenticated-requests" class="toc-h2 toc-link" data-title="Authenticated Requests"><strong>Authenticated Requests</strong></a>
+                  </li>
+                  <li>
+                    <a href="#refresh-token" class="toc-h2 toc-link" data-title="Refresh Token"><strong>Refresh Token</strong></a>
+                  </li>
+                  <li>
+                    <a href="#checking-expiration" class="toc-h2 toc-link" data-title="Checking Expiration"><strong>Checking Expiration</strong></a>
+                  </li>
+                  <li>
+                    <a href="#troubleshooting" class="toc-h2 toc-link" data-title="Troubleshooting"><strong>Troubleshooting</strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-2" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#put-patch" class="toc-h2 toc-link" data-title="PUT/PATCH"><strong><em>PUT/PATCH</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#me" class="toc-h1 toc-link" data-title="Me">Me</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-3" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-2" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-2" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#all-media" class="toc-h1 toc-link" data-title="All Media">All Media</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-4" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-3" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#single-media" class="toc-h1 toc-link" data-title="Single Media">Single Media</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-5" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-4" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-3" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#comments" class="toc-h1 toc-link" data-title="Comments">Comments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-6" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-5" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#comment" class="toc-h1 toc-link" data-title="Comment">Comment</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-7" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-6" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-4" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockups" class="toc-h1 toc-link" data-title="Mockups">Mockups</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-8" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-7" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup" class="toc-h1 toc-link" data-title="Mockup">Mockup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-9" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-8" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-5" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-images" class="toc-h1 toc-link" data-title="Mockup Images">Mockup Images</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-10" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-9" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-image" class="toc-h1 toc-link" data-title="Mockup Image">Mockup Image</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-11" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-10" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-6" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-image-versions" class="toc-h1 toc-link" data-title="Mockup Image Versions">Mockup Image Versions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-12" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-image-version" class="toc-h1 toc-link" data-title="Mockup Image Version">Mockup Image Version</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-13" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-7" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-comment-threads" class="toc-h1 toc-link" data-title="Mockup Comment Threads">Mockup Comment Threads</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-14" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-11" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mockup-comment-thread" class="toc-h1 toc-link" data-title="Mockup Comment Thread">Mockup Comment Thread</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-15" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-12" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-8" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#websites" class="toc-h1 toc-link" data-title="Websites">Websites</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-16" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-13" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website" class="toc-h1 toc-link" data-title="Website">Website</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-17" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-14" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-9" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website-pages" class="toc-h1 toc-link" data-title="Website Pages">Website Pages</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-18" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-15" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website-page" class="toc-h1 toc-link" data-title="Website Page">Website Page</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-19" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-16" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-10" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website-comment-threads" class="toc-h1 toc-link" data-title="Website Comment Threads">Website Comment Threads</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-20" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-17" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website-comment-thread" class="toc-h1 toc-link" data-title="Website Comment Thread">Website Comment Thread</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-21" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#post-18" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#delete-11" class="toc-h2 toc-link" data-title="DELETE"><strong><em>DELETE</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='http://projecthuddle.io'>About ProjectHuddle</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p><strong>Version:</strong> 2.0</p>
+
+<p>ProjectHuddle 3.4+ is fully integrated with the WordPress REST API. This allows ProjectHuddle data to be created, read, updated, and deleted using requests in JSON format and using WordPress REST API Authentication methods and standard HTTP verbs which are understood by most HTTP clients.</p>
+<h2 id='requirements'>Requirements</h2>
+<p>To use the latest version of the REST API you must be using:</p>
+
+<ul>
+<li>ProjectHuddle 3.4+.</li>
+<li>WordPress 4.7+.</li>
+<li>Pretty permalinks in <strong>Settings &gt; Permalinks</strong> so that the custom endpoints are supported. Default permalinks will not work.</li>
+<li>Your site must be served over HTTPS.</li>
+<li>Your server must be set up to allow for the Authentication header.</li>
+</ul>
+<h1 id='authentication'>Authentication</h1><h2 id='obtaining-an-api-key-and-api-secret'><strong>Obtaining an API Key and API Secret</strong></h2>
+<p>You&#39;ll need to get an API and Secret key from your ProjectHuddle plugin WordPress installation in order to securely communicate with the REST API. To do this, login to your WordPress installation and navigate to your <strong>Users &gt; Your Profile</strong>. You should see a ProjectHuddle API section. Type a description, then click &quot;Add New&quot;. You can download your API Key and API Secret for future reference.</p>
+<h2 id='generating-a-json-web-token'><strong>Generating a JSON Web Token</strong></h2>
+<p>ProjectHuddle uses JSON Web Token (JWT) to securely authenticate a valid user requesting access to ProjectHuddle REST API resources. JSON Web Tokens are an open, industry standard <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> method for representing claims securely between two parties.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/token</code></p>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">"https://example.org/wp-json/projecthuddle/v2/token"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">api_key</span><span class="p">:</span> <span class="s2">"12345ascde"</span><span class="p">,</span>
+    <span class="na">api_secret</span><span class="p">:</span> <span class="s2">"54321edcba"</span>
+  <span class="p">},</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"Content-Type"</span><span class="p">:</span> <span class="s2">"application/json"</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Success:"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">)))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre>
+<blockquote>
+<p>Example of JSON posted with the API Keys</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wp_user"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@sample.org"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345ascde"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">604800</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_REFRESH_TOKEN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>api_key</td>
+<td>formData</td>
+<td>API Key, generated from your WordPress user profile page.</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>api_secret</td>
+<td>formData</td>
+<td>API Secret, generated from your WordPress user profile page.</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h2 id='authenticated-requests'><strong>Authenticated Requests</strong></h2><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">"https://example.org/wp-json/projecthuddle/v2/mockup/1"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">Authorization</span><span class="p">:</span> <span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Success:"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">)))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre>
+<p>The access_token field is what you&#39;ll use for subsequent requests, with <code>Bearer: YOUR_ACCESS_TOKEN</code>.</p>
+<h2 id='refresh-token'><strong>Refresh Token</strong></h2>
+<p>The refresh_token field is a special kind of token that can be used to obtain a renewed access token when it finally expires. By default, access tokens expire after 7 days.</p>
+
+<blockquote>
+<p>Obtain a new access token using the refresh token</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">"https://example.org/wp-json/projecthuddle/v2/token"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">refresh_token</span><span class="p">:</span> <span class="s2">"YOUR_REFRESH_TOKEN"</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Success:"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">)))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_ACCESS_TOKEN"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wp_user"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"user_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@sample.org"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"api_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345ascde"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">604800</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR_REFRESH_TOKEN"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='checking-expiration'><strong>Checking Expiration</strong></h2>
+<p>You can also check if the token is still valid and when it expires using the <code>token/validate</code> endpoint.</p>
+
+<blockquote>
+<p>Checking Expiration</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">"https://example.org/wp-json/projecthuddle/v2/token/validate"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">Authorization</span><span class="p">:</span> <span class="s2">"Bearer YOUR_ACCESS_TOKEN"</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Success:"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">)))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Error:"</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rest_authentication_valid_access_token"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Valid access token."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">604800</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='troubleshooting'><strong>Troubleshooting</strong></h2>
+<p>Most of the shared hosting has disabled the HTTP Authorization Header by default. To enable this option you’ll need to edit your .htaccess file adding the following:</p>
+
+<p><code>RewriteEngine on</code> <br>
+<code>RewriteCond %{HTTP:Authorization} ^(.*)</code> <br>
+<code>RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]</code></p>
+<h3 id='wpengine'>WPEngine</h3>
+<p>To enable the Authorization header option you’ll need to edit your .htaccess file adding the following:</p>
+
+<p><code>SetEnvIf Authorization &quot;(.*)&quot; HTTP_AUTHORIZATION=$1</code></p>
+<h1 id='users'>Users</h1><h2 id='get'><strong><em>GET</em></strong></h2><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/users</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to users with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>query</td>
+<td>Limit result set to users matching at least one specific role provided. Accepts csv list or single role.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to users who are members of a project.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post'><strong><em>POST</em></strong></h2><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/users</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>formData</td>
+<td>Login name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>name</td>
+<td>formData</td>
+<td>Display name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>formData</td>
+<td>First name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>formData</td>
+<td>Last name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>email</td>
+<td>formData</td>
+<td>The email address for the user.</td>
+<td>Yes</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>url</td>
+<td>formData</td>
+<td>URL of the user.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>formData</td>
+<td>Description of the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>formData</td>
+<td>Locale for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>formData</td>
+<td>The nickname for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>formData</td>
+<td>Roles assigned to the user.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>Password for the user (never included).</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='user'>User</h1><h2 id='get-2'><strong><em>GET</em></strong></h2><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/users/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the user.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='put-patch'><strong><em>PUT/PATCH</em></strong></h2><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT/PATCH /projecthuddle/v2/users/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the user.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>username</td>
+<td>formData</td>
+<td>Login name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>name</td>
+<td>formData</td>
+<td>Display name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>formData</td>
+<td>First name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>formData</td>
+<td>Last name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>email</td>
+<td>formData</td>
+<td>The email address for the user.</td>
+<td>No</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>url</td>
+<td>formData</td>
+<td>URL of the user.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>formData</td>
+<td>Description of the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>formData</td>
+<td>Locale for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>formData</td>
+<td>The nickname for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>formData</td>
+<td>Roles assigned to the user.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>Password for the user (never included).</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete'><strong><em>DELETE</em></strong></h2><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/users/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the user.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Required to be true, as users do not support trashing.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>reassign</td>
+<td>query</td>
+<td>Reassign the deleted user&#39;s posts and links to this user ID.</td>
+<td>Yes</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='me'>Me</h1><h2 id='get-3'><strong><em>GET</em></strong></h2><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/users/me</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-2'><strong><em>POST</em></strong></h2><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/users/me</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>formData</td>
+<td>Login name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>name</td>
+<td>formData</td>
+<td>Display name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>formData</td>
+<td>First name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>formData</td>
+<td>Last name for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>email</td>
+<td>formData</td>
+<td>The email address for the user.</td>
+<td>No</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>url</td>
+<td>formData</td>
+<td>URL of the user.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>formData</td>
+<td>Description of the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>formData</td>
+<td>Locale for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>formData</td>
+<td>The nickname for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the user.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>formData</td>
+<td>Roles assigned to the user.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>Password for the user (never included).</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-2'><strong><em>DELETE</em></strong></h2><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/users/me</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Required to be true, as users do not support trashing.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>reassign</td>
+<td>query</td>
+<td>Reassign the deleted user&#39;s posts and links to this user ID.</td>
+<td>Yes</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='all-media'>All Media</h1><h2 id='get-4'><strong><em>GET</em></strong></h2><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/media</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>query</td>
+<td>Limit result set to items with particular parent IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_exclude</td>
+<td>query</td>
+<td>Limit result set to all items except those of a particular parent ID.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>media_type</td>
+<td>query</td>
+<td>Limit result set to attachments of a particular media type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>mime_type</td>
+<td>query</td>
+<td>Limit result set to attachments of a particular MIME type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-3'><strong><em>POST</em></strong></h2><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/media</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>alt_text</td>
+<td>formData</td>
+<td>Alternative text to display when attachment is not displayed.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>formData</td>
+<td>The attachment caption.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>description</td>
+<td>formData</td>
+<td>The attachment description.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>post</td>
+<td>formData</td>
+<td>The ID for the associated post of the attachment.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='single-media'>Single Media</h1><h2 id='get-5'><strong><em>GET</em></strong></h2><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/media/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-4'><strong><em>POST</em></strong></h2><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/media/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>alt_text</td>
+<td>formData</td>
+<td>Alternative text to display when attachment is not displayed.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>formData</td>
+<td>The attachment caption.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>description</td>
+<td>formData</td>
+<td>The attachment description.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>post</td>
+<td>formData</td>
+<td>The ID for the associated post of the attachment.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-3'><strong><em>DELETE</em></strong></h2><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/media/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='comments'>Comments</h1><h2 id='get-6'><strong><em>GET</em></strong></h2><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/comments</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to comments published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to comments assigned to specific user IDs. Requires authorization.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes comments assigned to specific user IDs. Requires authorization.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_email</td>
+<td>query</td>
+<td>Limit result set to that from a specific author email. Requires authorization.</td>
+<td>No</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to comments published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>query</td>
+<td>Limit result set to comments of specific parent IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>item</td>
+<td>query</td>
+<td>Limit result set to comments of specific item IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific parent IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>post</td>
+<td>query</td>
+<td>Limit result set to comments assigned to specific post IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to comments assigned a specific status. Requires authorization.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>query</td>
+<td>Limit result set to comments assigned a specific type. Requires authorization.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-5'><strong><em>POST</em></strong></h2><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/comments</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID of the user object, if author was a user.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>author_email</td>
+<td>formData</td>
+<td>Email address for the object author.</td>
+<td>No</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>author_ip</td>
+<td>formData</td>
+<td>IP address for the object author.</td>
+<td>No</td>
+<td>string (ip)</td>
+</tr>
+<tr>
+<td>author_name</td>
+<td>formData</td>
+<td>Display name for the object author.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author_url</td>
+<td>formData</td>
+<td>URL for the object author.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>author_user_agent</td>
+<td>formData</td>
+<td>User agent for the object author.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>post</td>
+<td>formData</td>
+<td>The ID of the associated post object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>State of the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='comment'>Comment</h1><h2 id='get-7'><strong><em>GET</em></strong></h2><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/comments/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the parent post of the comment (if the post is password protected).</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-6'><strong><em>POST</em></strong></h2><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/comments/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID of the user object, if author was a user.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>author_email</td>
+<td>formData</td>
+<td>Email address for the object author.</td>
+<td>No</td>
+<td>string (email)</td>
+</tr>
+<tr>
+<td>author_ip</td>
+<td>formData</td>
+<td>IP address for the object author.</td>
+<td>No</td>
+<td>string (ip)</td>
+</tr>
+<tr>
+<td>author_name</td>
+<td>formData</td>
+<td>Display name for the object author.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author_url</td>
+<td>formData</td>
+<td>URL for the object author.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>author_user_agent</td>
+<td>formData</td>
+<td>User agent for the object author.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>post</td>
+<td>formData</td>
+<td>The ID of the associated post object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>State of the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-4'><strong><em>DELETE</em></strong></h2><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/comments/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the parent post of the comment (if the post is password protected).</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockups'>Mockups</h1><h2 id='get-8'><strong><em>GET</em></strong></h2><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project_member</td>
+<td>query</td>
+<td>Limit results to only those you are a member of.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-7'><strong><em>POST</em></strong></h2><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>access_link_login</td>
+<td>formData</td>
+<td>Whether to allow logging in through the access link.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_members</td>
+<td>formData</td>
+<td>A list of user IDs that have access to the project.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project_access</td>
+<td>formData</td>
+<td>Access options for the project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>retina</td>
+<td>formData</td>
+<td>Whether to serve the images as retina</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>sharing</td>
+<td>formData</td>
+<td>Is the project sharing UI enabled?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>formData</td>
+<td>Is the project zoom functionality enabled</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>tooltip</td>
+<td>formData</td>
+<td>Show the Leave A Comment tooltip.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_comments</td>
+<td>formData</td>
+<td>Allow non-users to make comments</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_approval</td>
+<td>formData</td>
+<td>Approvals allowed?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_unapproval</td>
+<td>formData</td>
+<td>Unapprovals allowed?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>me</td>
+<td>formData</td>
+<td>Current user data.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup'>Mockup</h1><h2 id='get-9'><strong><em>GET</em></strong></h2><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-8'><strong><em>POST</em></strong></h2><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>access_link_login</td>
+<td>formData</td>
+<td>Whether to allow logging in through the access link.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_members</td>
+<td>formData</td>
+<td>A list of user IDs that have access to the project.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project_access</td>
+<td>formData</td>
+<td>Access options for the project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>retina</td>
+<td>formData</td>
+<td>Whether to serve the images as retina</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>sharing</td>
+<td>formData</td>
+<td>Is the project sharing UI enabled?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>formData</td>
+<td>Is the project zoom functionality enabled</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>tooltip</td>
+<td>formData</td>
+<td>Show the Leave A Comment tooltip.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_comments</td>
+<td>formData</td>
+<td>Allow non-users to make comments</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_approval</td>
+<td>formData</td>
+<td>Approvals allowed?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>project_unapproval</td>
+<td>formData</td>
+<td>Unapprovals allowed?</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>me</td>
+<td>formData</td>
+<td>Current user data.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-5'><strong><em>DELETE</em></strong></h2><h3 id='http-request-24'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/mockup/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-images'>Mockup Images</h1><h2 id='get-10'><strong><em>GET</em></strong></h2><h3 id='http-request-25'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-image</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>query</td>
+<td>Limit result set to posts with a specific menu_order value.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>sketch_id</td>
+<td>query</td>
+<td>Limit results by sketch id.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-9'><strong><em>POST</em></strong></h2><h3 id='http-request-26'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup-image</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>formData</td>
+<td>Media type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>formData</td>
+<td>The excerpt for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>featured_media</td>
+<td>formData</td>
+<td>The ID of the featured media for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>Order of image in project.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sketch_id</td>
+<td>formData</td>
+<td>ID of sketch artboard</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>version</td>
+<td>formData</td>
+<td>Save previous version history for this change.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>options</td>
+<td>formData</td>
+<td></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>approval</td>
+<td>formData</td>
+<td>Approval.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>approval_data</td>
+<td>formData</td>
+<td>Array of approval data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Whether to resolve all threads in this image.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>pdf_page</td>
+<td>formData</td>
+<td>Page of the pdf document.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-image'>Mockup Image</h1><h2 id='get-11'><strong><em>GET</em></strong></h2><h3 id='http-request-27'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-image/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-10'><strong><em>POST</em></strong></h2><h3 id='http-request-28'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup-image/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>type</td>
+<td>formData</td>
+<td>Media type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>formData</td>
+<td>The excerpt for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>featured_media</td>
+<td>formData</td>
+<td>The ID of the featured media for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>Order of image in project.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sketch_id</td>
+<td>formData</td>
+<td>ID of sketch artboard</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>version</td>
+<td>formData</td>
+<td>Save previous version history for this change.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>options</td>
+<td>formData</td>
+<td></td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>approval</td>
+<td>formData</td>
+<td>Approval.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>approval_data</td>
+<td>formData</td>
+<td>Array of approval data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Whether to resolve all threads in this image.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>pdf_page</td>
+<td>formData</td>
+<td>Page of the pdf document.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-6'><strong><em>DELETE</em></strong></h2><h3 id='http-request-29'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/mockup-image/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-image-versions'>Mockup Image Versions</h1><h2 id='get-12'><strong><em>GET</em></strong></h2><h3 id='http-request-30'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-image/{parent}/versions</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>parent</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>query</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-image-version'>Mockup Image Version</h1><h2 id='get-13'><strong><em>GET</em></strong></h2><h3 id='http-request-31'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-image/{parent}/versions/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>parent</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>query</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-7'><strong><em>DELETE</em></strong></h2><h3 id='http-request-32'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/mockup-image/{parent}/versions/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>parent</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>query</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Required to be true, as versions do not support trashing.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-comment-threads'>Mockup Comment Threads</h1><h2 id='get-14'><strong><em>GET</em></strong></h2><h3 id='http-request-33'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-thread</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>query</td>
+<td>Limit results by resolved status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>query</td>
+<td>Limit by ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-11'><strong><em>POST</em></strong></h2><h3 id='http-request-34'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup-thread</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>relativeX</td>
+<td>formData</td>
+<td>Relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>relativeY</td>
+<td>formData</td>
+<td>Relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Issue resolve status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>formData</td>
+<td>ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>formData</td>
+<td>Array of comment objects in thread.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='mockup-comment-thread'>Mockup Comment Thread</h1><h2 id='get-15'><strong><em>GET</em></strong></h2><h3 id='http-request-35'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/mockup-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-12'><strong><em>POST</em></strong></h2><h3 id='http-request-36'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/mockup-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>relativeX</td>
+<td>formData</td>
+<td>Relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>relativeY</td>
+<td>formData</td>
+<td>Relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Issue resolve status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>formData</td>
+<td>ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>formData</td>
+<td>Array of comment objects in thread.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-8'><strong><em>DELETE</em></strong></h2><h3 id='http-request-37'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/mockup-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='websites'>Websites</h1><h2 id='get-16'><strong><em>GET</em></strong></h2><h3 id='http-request-38'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>website_url</td>
+<td>query</td>
+<td>URL for the website.</td>
+<td>No</td>
+<td>url</td>
+</tr>
+<tr>
+<td>project_member</td>
+<td>query</td>
+<td>Limit results to only those you are a member of.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-13'><strong><em>POST</em></strong></h2><h3 id='http-request-39'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>me</td>
+<td>formData</td>
+<td>Current user data.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>access_link_login</td>
+<td>formData</td>
+<td>Whether to allow logging in through the access link.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project_members</td>
+<td>formData</td>
+<td>A list of user IDs that have access to the project.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>website_url</td>
+<td>formData</td>
+<td>URL for the website.</td>
+<td>Yes</td>
+<td>url</td>
+</tr>
+<tr>
+<td>project_access</td>
+<td>formData</td>
+<td>Access options for the project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>toolbar_location</td>
+<td>formData</td>
+<td>Toolbar location for project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='website'>Website</h1><h2 id='get-17'><strong><em>GET</em></strong></h2><h3 id='http-request-40'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-14'><strong><em>POST</em></strong></h2><h3 id='http-request-41'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>me</td>
+<td>formData</td>
+<td>Current user data.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>access_link_login</td>
+<td>formData</td>
+<td>Whether to allow logging in through the access link.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>project_members</td>
+<td>formData</td>
+<td>A list of user IDs that have access to the project.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>website_url</td>
+<td>formData</td>
+<td>URL for the website.</td>
+<td>No</td>
+<td>url</td>
+</tr>
+<tr>
+<td>project_access</td>
+<td>formData</td>
+<td>Access options for the project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>toolbar_location</td>
+<td>formData</td>
+<td>Toolbar location for project</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-9'><strong><em>DELETE</em></strong></h2><h3 id='http-request-42'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/website/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='website-pages'>Website Pages</h1><h2 id='get-18'><strong><em>GET</em></strong></h2><h3 id='http-request-43'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website-page</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>query</td>
+<td>Limit result set to posts with a specific menu_order value.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>page_url</td>
+<td>query</td>
+<td>Url for the page.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-15'><strong><em>POST</em></strong></h2><h3 id='http-request-44'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website-page</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>The order of the object in relation to other object of its type.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page_url</td>
+<td>formData</td>
+<td>Full url for the page.</td>
+<td>Yes</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='website-page'>Website Page</h1><h2 id='get-19'><strong><em>GET</em></strong></h2><h3 id='http-request-45'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website-page/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-16'><strong><em>POST</em></strong></h2><h3 id='http-request-46'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website-page/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>The order of the object in relation to other object of its type.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page_url</td>
+<td>formData</td>
+<td>Full url for the page.</td>
+<td>No</td>
+<td>string (uri)</td>
+</tr>
+<tr>
+<td>resolve_status</td>
+<td>formData</td>
+<td>Array of comment data for the image.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-10'><strong><em>DELETE</em></strong></h2><h3 id='http-request-47'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/website-page/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='website-comment-threads'>Website Comment Threads</h1><h2 id='get-20'><strong><em>GET</em></strong></h2><h3 id='http-request-48'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website-thread</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page</td>
+<td>query</td>
+<td>Current page of the collection.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>query</td>
+<td>Maximum number of items to be returned in result set.</td>
+<td>No</td>
+<td>integer (number)</td>
+</tr>
+<tr>
+<td>search</td>
+<td>query</td>
+<td>Limit results to those matching a string.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>after</td>
+<td>query</td>
+<td>Limit response to posts published after a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>author</td>
+<td>query</td>
+<td>Limit result set to posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>author_exclude</td>
+<td>query</td>
+<td>Ensure result set excludes posts assigned to specific authors.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>before</td>
+<td>query</td>
+<td>Limit response to posts published before a given ISO8601 compliant date.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>query</td>
+<td>Ensure result set excludes specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>include</td>
+<td>query</td>
+<td>Limit result set to specific IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>query</td>
+<td>Limit result set to posts with a specific menu_order value.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>Offset the result set by a specific number of items.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>order</td>
+<td>query</td>
+<td>Order sort attribute ascending or descending.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderby</td>
+<td>query</td>
+<td>Sort collection by object attribute.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>query</td>
+<td>Limit result set to posts with one or more specific slugs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>status</td>
+<td>query</td>
+<td>Limit result set to posts assigned one or more statuses.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>query</td>
+<td>Limit result set to items that have a parent model.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project</td>
+<td>query</td>
+<td>Limit result set to comments of specific project IDs.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>query</td>
+<td>Limit results by resolved status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>query</td>
+<td>Limit by ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>project_id</td>
+<td>query</td>
+<td>Limit results by project id status.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-17'><strong><em>POST</em></strong></h2><h3 id='http-request-49'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website-thread</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>The order of the object in relation to other object of its type.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>path</td>
+<td>formData</td>
+<td>CSS path to the clicked element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>xPath</td>
+<td>formData</td>
+<td>xPath to the element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>relativeX</td>
+<td>formData</td>
+<td>Relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>relativeY</td>
+<td>formData</td>
+<td>Relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>pageX</td>
+<td>formData</td>
+<td>Page relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>pageY</td>
+<td>formData</td>
+<td>Page relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>html</td>
+<td>formData</td>
+<td>Inner html of the clicked element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>resX</td>
+<td>formData</td>
+<td>Horizontal resolution of user who reported issue.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resY</td>
+<td>formData</td>
+<td>Vertical resolution of user who reported issue.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Issue resolve status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>browser</td>
+<td>formData</td>
+<td>Browser information.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>browserVersion</td>
+<td>formData</td>
+<td>Browser version information.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>browserOS</td>
+<td>formData</td>
+<td>Operating system information.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page_url</td>
+<td>formData</td>
+<td>Url for the page.</td>
+<td>No</td>
+<td>url</td>
+</tr>
+<tr>
+<td>page_title</td>
+<td>formData</td>
+<td>Title for the new page.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>website_id</td>
+<td>formData</td>
+<td>Website project id for the thread.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>formData</td>
+<td>ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>formData</td>
+<td>Array of comment objects in thread.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>201</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h1 id='website-comment-thread'>Website Comment Thread</h1><h2 id='get-21'><strong><em>GET</em></strong></h2><h3 id='http-request-50'>HTTP Request</h3>
+<p><code>GET /projecthuddle/v2/website-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>context</td>
+<td>query</td>
+<td>Scope under which the request is made; determines fields present in response.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>query</td>
+<td>The password for the post if it is password protected.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='post-18'><strong><em>POST</em></strong></h2><h3 id='http-request-51'>HTTP Request</h3>
+<p><code>POST /projecthuddle/v2/website-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>formData</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>date</td>
+<td>formData</td>
+<td>The date the object was published, in the site&#39;s timezone.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>date_gmt</td>
+<td>formData</td>
+<td>The date the object was published, as GMT.</td>
+<td>No</td>
+<td>dateTime</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>formData</td>
+<td>An alphanumeric identifier for the object unique to its type.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>status</td>
+<td>formData</td>
+<td>A named status for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>password</td>
+<td>formData</td>
+<td>A password to protect access to the content and excerpt.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>formData</td>
+<td>The ID for the parent of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>title</td>
+<td>formData</td>
+<td>The title for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>content</td>
+<td>formData</td>
+<td>The content for the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>formData</td>
+<td>The ID for the author of the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comment_status</td>
+<td>formData</td>
+<td>Whether or not comments are open on the object.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>ping_status</td>
+<td>formData</td>
+<td>Whether or not the object can be pinged.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>menu_order</td>
+<td>formData</td>
+<td>The order of the object in relation to other object of its type.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>formData</td>
+<td>Meta fields.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>path</td>
+<td>formData</td>
+<td>CSS path to the clicked element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>xPath</td>
+<td>formData</td>
+<td>xPath to the element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>relativeX</td>
+<td>formData</td>
+<td>Relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>relativeY</td>
+<td>formData</td>
+<td>Relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>pageX</td>
+<td>formData</td>
+<td>Page relative horizontal click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>pageY</td>
+<td>formData</td>
+<td>Page relative vertical click position of the element.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>html</td>
+<td>formData</td>
+<td>Inner html of the clicked element.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>resX</td>
+<td>formData</td>
+<td>Horizontal resolution of user who reported issue.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resY</td>
+<td>formData</td>
+<td>Vertical resolution of user who reported issue.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>resolved</td>
+<td>formData</td>
+<td>Issue resolve status.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>browser</td>
+<td>formData</td>
+<td>Browser information.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>browserVersion</td>
+<td>formData</td>
+<td>Browser version information.</td>
+<td>No</td>
+<td>number</td>
+</tr>
+<tr>
+<td>browserOS</td>
+<td>formData</td>
+<td>Operating system information.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>page_url</td>
+<td>formData</td>
+<td>Url for the page.</td>
+<td>No</td>
+<td>url</td>
+</tr>
+<tr>
+<td>page_title</td>
+<td>formData</td>
+<td>Title for the new page.</td>
+<td>No</td>
+<td>string</td>
+</tr>
+<tr>
+<td>website_id</td>
+<td>formData</td>
+<td>Website project id for the thread.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>assigned</td>
+<td>formData</td>
+<td>ID of user who is assigned.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>formData</td>
+<td>Array of comment objects in thread.</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+<h2 id='delete-11'><strong><em>DELETE</em></strong></h2><h3 id='http-request-52'>HTTP Request</h3>
+<p><code>DELETE /projecthuddle/v2/website-thread/{id}</code></p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>query</td>
+<td>Unique identifier for the object.</td>
+<td>No</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>force</td>
+<td>query</td>
+<td>Whether to bypass trash and force deletion.</td>
+<td>No</td>
+<td>boolean</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>successful operation</td>
+</tr>
+<tr>
+<td>default</td>
+<td>error</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- You don&#39;t have permission to the endpoint.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The endpoint could not be found.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You made an invalid or incorrect request.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- An error occurred on the server. Check your server logs for information.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. This can occur during WordPress or plugin updates.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
