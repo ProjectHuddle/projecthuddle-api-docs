@@ -11,6 +11,10 @@ includes:
   - errors
 
 search: true
+
+logo:
+  link: https://projecthuddle.io
+  target: _blank
 ---
 
 # Introduction
