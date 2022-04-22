@@ -191,6 +191,85 @@ To enable the Authorization header option you’ll need to edit your .htaccess f
 
 `GET /projecthuddle/v2/users`
 
+```javascript
+const options = {method: 'GET'};
+
+fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  }
+})
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+  {
+    "id": 19,
+    "name": "John",
+    "url": "",
+    "description": "",
+    "link": "https://projecthuddle.com/author/john/",
+    "slug": "john",
+    "user_role": "Project Client",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/16ffd871facc7fd6cb4939703dd90d2b?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/16ffd871facc7fd6cb4939703dd90d2b?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/16ffd871facc7fd6cb4939703dd90d2b?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users/19"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "name": "Sam",
+    "url": "",
+    "description": "",
+    "link": "https://projecthuddle.com/author/sam/",
+    "slug": "sam",
+    "user_role": "Project Client",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/9eeca2d699a8dfdcd5c5ac9d1cee6e3f?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/9eeca2d699a8dfdcd5c5ac9d1cee6e3f?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/9eeca2d699a8dfdcd5c5ac9d1cee6e3f?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users/20"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+]
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                                              | Required | Type             |
