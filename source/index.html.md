@@ -192,9 +192,7 @@ To enable the Authorization header option you’ll need to edit your .htaccess f
 `GET /projecthuddle/v2/users`
 
 ```javascript
-const options = {method: 'GET'};
-
-fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
+fetch('https://example.org/wp-json/projecthuddle/v2/users', {
   method: "GET",
   headers: {
     "Content-Type": "application/json"
@@ -214,7 +212,7 @@ fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
     "name": "John",
     "url": "",
     "description": "",
-    "link": "https://projecthuddle.com/author/john/",
+    "link": "https://example.org/author/john/",
     "slug": "john",
     "user_role": "Project Client",
     "avatar_urls": {
@@ -228,12 +226,12 @@ fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
     "_links": {
       "self": [
         {
-          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users/19"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/19"
         }
       ],
       "collection": [
         {
-          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
         }
       ]
     }
@@ -243,7 +241,7 @@ fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
     "name": "Sam",
     "url": "",
     "description": "",
-    "link": "https://projecthuddle.com/author/sam/",
+    "link": "https://example.org/author/sam/",
     "slug": "sam",
     "user_role": "Project Client",
     "avatar_urls": {
@@ -257,12 +255,12 @@ fetch('https://projecthuddle.com/wp-json/projecthuddle/v2/users', {
     "_links": {
       "self": [
         {
-          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users/20"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/20"
         }
       ],
       "collection": [
         {
-          "href": "https://projecthuddle.com/wp-json/projecthuddle/v2/users"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
         }
       ]
     }
