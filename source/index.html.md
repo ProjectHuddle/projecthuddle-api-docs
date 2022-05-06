@@ -4794,7 +4794,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1468', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -4812,7 +4812,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', option
   "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
   "status": "publish",
   "type": "image",
-  "link": "https://bsf.ddev.site/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "link": "https://example.org/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
   "title": {
     "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
   },
@@ -4829,7 +4829,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', option
   "model_type": "image",
   "current_version": "2",
   "sketch_id": "",
-  "ph_short_link": "https://bsf.ddev.site/?p=1468",
+  "ph_short_link": "https://example.org/?p=1468",
   "options": {
     "alignment": "center",
     "size": "scale",
@@ -4853,45 +4853,45 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', option
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+        "href": "https://example.org/wp-json/wp/v2/types/project_image"
       }
     ],
     "versions": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
       }
     ],
     "up": [
       {
         "embeddable": false,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
       }
     ],
     "wp:featuredmedia": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1379"
+        "href": "https://example.org/wp-json/projecthuddle/v2/media/1379"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1468"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1468"
       }
     ],
     "curies": [
@@ -4942,7 +4942,7 @@ const options = {
 
 options.body = form;
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1468', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -4961,7 +4961,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', option
   "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
   "status": "publish",
   "type": "image",
-  "link": "https://bsf.ddev.site/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "link": "https://example.org/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
   "title": {
     "raw": "Changed the title",
     "rendered": "Changed the title"
@@ -5003,45 +5003,45 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', option
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+        "href": "https://example.org/wp-json/wp/v2/types/project_image"
       }
     ],
     "versions": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
       }
     ],
     "up": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
       }
     ],
     "wp:featuredmedia": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1379"
+        "href": "https://example.org/wp-json/projecthuddle/v2/media/1379"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1468"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1468"
       }
     ],
     "curies": [
@@ -5103,7 +5103,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1478', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -5122,7 +5122,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478', option
   "slug": "a-new-title-for-new-mockup-image-2__trashed",
   "status": "trash",
   "type": "image",
-  "link": "https://bsf.ddev.site/?post_type=project_image&p=1478&access_token=ce635f81fd0b4c77decf759a9919deec",
+  "link": "https://example.org/?post_type=project_image&p=1478&access_token=ce635f81fd0b4c77decf759a9919deec",
   "title": {
     "raw": "A new title for new mockup image",
     "rendered": "A new title for new mockup image"
@@ -5164,39 +5164,39 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478', option
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1478"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+        "href": "https://example.org/wp-json/wp/v2/types/project_image"
       }
     ],
     "versions": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478/versions"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1478/versions"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1478&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1478&per_page=5&type=approval"
       }
     ],
     "up": [
       {
         "embeddable": false,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1478"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1478"
       }
     ],
     "curies": [
@@ -5241,7 +5241,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -5260,7 +5260,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions
     "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
     "status": "publish",
     "type": "image",
-    "link": "https://bsf.ddev.site/?post_type=ph_version&p=1474&access_token=b0f06bae8adc6cd0e18adf74b67b7977",
+    "link": "https://example.org/?post_type=ph_version&p=1474&access_token=b0f06bae8adc6cd0e18adf74b67b7977",
     "title": {
       "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
     },
@@ -5277,7 +5277,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions
     "model_type": "image_version",
     "current_version": "1",
     "sketch_id": "",
-    "ph_short_link": "https://bsf.ddev.site/?p=1474",
+    "ph_short_link": "https://example.org/?p=1474",
     "options": {
       "alignment": "center",
       "size": "scale",
@@ -5301,56 +5301,56 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1474"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1474"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+          "href": "https://example.org/wp-json/wp/v2/types/project_image"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "replies": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1474"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1474"
         }
       ],
       "comments": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1474"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1474"
         }
       ],
       "version-history": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/1474/revisions"
+          "href": "https://example.org/wp-json/projecthuddle/v2/1474/revisions"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
         }
       ],
       "wp:featuredmedia": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1335"
+          "href": "https://example.org/wp-json/projecthuddle/v2/media/1335"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1474"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1474"
         }
       ],
       "curies": [
@@ -5396,7 +5396,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -5424,7 +5424,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions
   "_links": {
     "parent": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ]
   }
@@ -5462,7 +5462,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474?force=true', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474?force=true', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -5526,7 +5526,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-thread', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -5545,7 +5545,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     "slug": "content-is-static",
     "status": "publish",
     "type": "ph_comment_location",
-    "link": "https://bsf.ddev.site/mockup-comment/1510/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "link": "https://example.org/mockup-comment/1510/?access_token=ce635f81fd0b4c77decf759a9919deec",
     "title": {
       "rendered": "content is static"
     },
@@ -5576,51 +5576,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     ],
     "comments_count": 1,
     "activity_count": 1,
-    "ph_short_link": "https://bsf.ddev.site/?p=1510",
+    "ph_short_link": "https://example.org/?p=1510",
     "project_name": "Huddle Mock",
     "item_name": "Fruits basket",
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1510"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1510"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+          "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "replies": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1510"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1510"
         }
       ],
       "comments": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1510"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1510"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1469"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1469"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1510"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1510"
         }
       ],
       "curies": [
@@ -5641,7 +5641,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     "slug": "comment-threads-are-comments",
     "status": "publish",
     "type": "ph_comment_location",
-    "link": "https://bsf.ddev.site/mockup-comment/1509/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "link": "https://example.org/mockup-comment/1509/?access_token=ce635f81fd0b4c77decf759a9919deec",
     "title": {
       "rendered": "comment threads are comments"
     },
@@ -5672,51 +5672,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     ],
     "comments_count": 1,
     "activity_count": 1,
-    "ph_short_link": "https://bsf.ddev.site/?p=1509",
+    "ph_short_link": "https://example.org/?p=1509",
     "project_name": "Huddle Mock",
     "item_name": "Fruits basket",
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1509"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1509"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+          "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "replies": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1509"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1509"
         }
       ],
       "comments": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1509"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1509"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1469"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1469"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1509"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1509"
         }
       ],
       "curies": [
@@ -5737,7 +5737,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     "slug": "just-another-comment",
     "status": "publish",
     "type": "ph_comment_location",
-    "link": "https://bsf.ddev.site/mockup-comment/1507/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "link": "https://example.org/mockup-comment/1507/?access_token=ce635f81fd0b4c77decf759a9919deec",
     "title": {
       "rendered": "just another comment"
     },
@@ -5768,51 +5768,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     ],
     "comments_count": 1,
     "activity_count": 1,
-    "ph_short_link": "https://bsf.ddev.site/?p=1507",
+    "ph_short_link": "https://example.org/?p=1507",
     "project_name": "Huddle Mock",
     "item_name": "The city view",
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1507"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1507"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+          "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "replies": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1507"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1507"
         }
       ],
       "comments": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1507"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1507"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1507"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1507"
         }
       ],
       "curies": [
@@ -5833,7 +5833,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     "slug": "another-one-comment",
     "status": "publish",
     "type": "ph_comment_location",
-    "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "link": "https://example.org/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
     "title": {
       "rendered": "another one comment"
     },
@@ -5864,51 +5864,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
     ],
     "comments_count": 1,
     "activity_count": 1,
-    "ph_short_link": "https://bsf.ddev.site/?p=1480",
+    "ph_short_link": "https://example.org/?p=1480",
     "project_name": "Huddle Mock",
     "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+          "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "replies": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
         }
       ],
       "comments": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1480"
         }
       ],
       "curies": [
@@ -5982,7 +5982,7 @@ const options = {
 
 options.body = form;
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-thread', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -6001,7 +6001,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
   "slug": "api-comment-4",
   "status": "publish",
   "type": "ph_comment_location",
-  "link": "https://bsf.ddev.site/mockup-comment/1516/?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "link": "https://example.org/mockup-comment/1516/?access_token=ce635f81fd0b4c77decf759a9919deec",
   "title": {
     "raw": "API comment",
     "rendered": "API comment"
@@ -6037,51 +6037,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1516"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1516"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "replies": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1516"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1516"
       }
     ],
     "assigned": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/20"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/20"
       }
     ],
     "comments": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1516"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1516"
       }
     ],
     "up": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1516"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1516"
       }
     ],
     "curies": [
@@ -6141,7 +6141,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -6159,7 +6159,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
   "slug": "jus-a-comment",
   "status": "publish",
   "type": "ph_comment_location",
-  "link": "https://bsf.ddev.site/mockup-comment/1480/",
+  "link": "https://example.org/mockup-comment/1480/",
   "title": {
     "rendered": "jus a comment"
   },
@@ -6204,51 +6204,51 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
   ],
   "comments_count": 1,
   "activity_count": 1,
-  "ph_short_link": "https://bsf.ddev.site/?p=1480",
+  "ph_short_link": "https://example.org/?p=1480",
   "project_name": "Huddle Mock",
   "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "replies": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "comments": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "up": [
       {
         "embeddable": false,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1480"
       }
     ],
     "curies": [
@@ -6298,7 +6298,7 @@ const options = {
 
 options.body = form;
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -6317,7 +6317,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
   "slug": "just-a-comment",
   "status": "publish",
   "type": "ph_comment_location",
-  "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "link": "https://example.org/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
   "title": {
     "raw": "just changed the content",
     "rendered": "just changed the content"
@@ -6358,7 +6358,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
       "content": {
         "rendered": "<p>just changed the content</p>"
       },
-      "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec/",
+      "link": "https://example.org/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec/",
       "status": "approved",
       "type": "ph_comment",
       "project_id": 180,
@@ -6377,39 +6377,39 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
       "_links": {
         "self": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments/172"
+            "href": "https://example.org/wp-json/projecthuddle/v2/comments/172"
           }
         ],
         "collection": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments"
+            "href": "https://example.org/wp-json/projecthuddle/v2/comments"
           }
         ],
         "author": [
           {
             "embeddable": true,
-            "href": "https://bsf.ddev.site/wp-json/wp/v2/users/16"
+            "href": "https://example.org/wp-json/wp/v2/users/16"
           }
         ],
         "up": [
           {
             "embeddable": true,
             "post_type": "ph_comment_location",
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+            "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480"
           }
         ],
         "item": [
           {
             "embeddable": true,
             "post_type": "mockup-image",
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+            "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
           }
         ],
         "project": [
           {
             "embeddable": true,
             "post_type": "mockup",
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+            "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
           }
         ]
       }
@@ -6422,45 +6422,45 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "replies": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "comments": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "up": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1480"
       }
     ],
     "curies": [
@@ -6519,7 +6519,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -6576,45 +6576,45 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', optio
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread/1480"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-thread"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        "href": "https://example.org/wp-json/wp/v2/types/ph_comment_location"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "replies": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "comments": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1480"
       }
     ],
     "up": [
       {
         "embeddable": false,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1480"
       }
     ],
     "curies": [
@@ -6659,7 +6659,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -6678,7 +6678,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "slug": "https-curlslope-s2-tastewp-com-wp-admin",
     "status": "publish",
     "type": "ph-website",
-    "link": "https://bsf.ddev.site/website/https-curlslope-s2-tastewp-com-wp-admin/?access_token=dd1e54352aec6e3728ea71f7008c0c2c",
+    "link": "https://example.org/website/https-curlslope-s2-tastewp-com-wp-admin/?access_token=dd1e54352aec6e3728ea71f7008c0c2c",
     "title": {
       "rendered": "https://curlslope.s2-tastewp.com/wp-admin"
     },
@@ -6697,7 +6697,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
       "email": "johndoe@gmail.com",
       "url": "",
       "description": "",
-      "link": "https://bsf.ddev.site/author/john/",
+      "link": "https://example.org/author/john/",
       "locale": "en_US",
       "nickname": "john",
       "slug": "john",
@@ -6723,17 +6723,17 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
       "_links": {
         "self": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+            "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
           }
         ],
         "collection": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+            "href": "https://example.org/wp-json/projecthuddle/v2/users"
           }
         ]
       }
     },
-    "ph_short_link": "https://bsf.ddev.site/?p=1503",
+    "ph_short_link": "https://example.org/?p=1503",
     "website_url": "https://curlslope.s2-tastewp.com",
     "pages": [
 
@@ -6766,40 +6766,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1503"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website/1503"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+          "href": "https://example.org/wp-json/wp/v2/types/ph-website"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "members": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16&per_page=100"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16&per_page=100"
         }
       ],
       "approval_history": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1503&per_page=5&type=approval"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1503&per_page=5&type=approval"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1503"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1503"
         }
       ],
       "curies": [
@@ -6820,7 +6820,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "slug": "1427",
     "status": "publish",
     "type": "ph-website",
-    "link": "https://bsf.ddev.site/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "link": "https://example.org/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
     "title": {
       "rendered": "https://funola.com/"
     },
@@ -6839,7 +6839,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
       "email": "johndoe@gmail.com",
       "url": "",
       "description": "",
-      "link": "https://bsf.ddev.site/author/john/",
+      "link": "https://example.org/author/john/",
       "locale": "en_US",
       "nickname": "john",
       "slug": "john",
@@ -6865,17 +6865,17 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
       "_links": {
         "self": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+            "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
           }
         ],
         "collection": [
           {
-            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+            "href": "https://example.org/wp-json/projecthuddle/v2/users"
           }
         ]
       }
     },
-    "ph_short_link": "https://bsf.ddev.site/?p=1427",
+    "ph_short_link": "https://example.org/?p=1427",
     "website_url": "https://funola.com",
     "pages": [
 
@@ -6913,40 +6913,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+          "href": "https://example.org/wp-json/wp/v2/types/ph-website"
         }
       ],
       "author": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "members": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
         }
       ],
       "approval_history": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1427"
         }
       ],
       "curies": [
@@ -7015,7 +7015,7 @@ const options = {
 
 options.body = form;
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -7034,7 +7034,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
   "slug": "rest-api-website",
   "status": "publish",
   "type": "ph-website",
-  "link": "https://bsf.ddev.site/website/rest-api-website/?access_token=75867dcfe8b32bf84a969e0c0411c7b8",
+  "link": "https://example.org/website/rest-api-website/?access_token=75867dcfe8b32bf84a969e0c0411c7b8",
   "title": {
     "raw": "Rest API website",
     "rendered": "Rest API website"
@@ -7054,7 +7054,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "email": "johndoe@gmail.com",
     "url": "",
     "description": "",
-    "link": "https://bsf.ddev.site/author/john/",
+    "link": "https://example.org/author/john/",
     "locale": "en_US",
     "nickname": "john",
     "slug": "john",
@@ -7080,12 +7080,12 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
         }
       ]
     }
@@ -7123,40 +7123,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1596"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        "href": "https://example.org/wp-json/wp/v2/types/ph-website"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "members": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1596"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1596"
       }
     ],
     "curies": [
@@ -7214,7 +7214,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website/1427', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -7232,7 +7232,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
   "slug": "1427",
   "status": "publish",
   "type": "ph-website",
-  "link": "https://bsf.ddev.site/website/1427/",
+  "link": "https://example.org/website/1427/",
   "title": {
     "rendered": "https://funola.com/"
   },
@@ -7249,7 +7249,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
       "status": 401
     }
   },
-  "ph_short_link": "https://bsf.ddev.site/?p=1427",
+  "ph_short_link": "https://example.org/?p=1427",
   "website_url": "https://funola.com",
   "pages": [
 
@@ -7287,40 +7287,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        "href": "https://example.org/wp-json/wp/v2/types/ph-website"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "members": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1427"
       }
     ],
     "curies": [
@@ -7370,7 +7370,7 @@ const options = {
 
 options.body = form;
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website/1427', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -7389,7 +7389,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
   "slug": "1427",
   "status": "publish",
   "type": "ph-website",
-  "link": "https://bsf.ddev.site/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "link": "https://example.org/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
   "title": {
     "raw": "https://funola.com/",
     "rendered": "https://funola.com/"
@@ -7409,7 +7409,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
     "email": "johndoe@gmail.com",
     "url": "",
     "description": "",
-    "link": "https://bsf.ddev.site/author/john/",
+    "link": "https://example.org/author/john/",
     "locale": "en_US",
     "nickname": "john",
     "slug": "john",
@@ -7435,12 +7435,12 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
         }
       ]
     }
@@ -7478,40 +7478,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        "href": "https://example.org/wp-json/wp/v2/types/ph-website"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "members": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=20,22&per_page=100"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=20,22&per_page=100"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1427"
       }
     ],
     "curies": [
@@ -7568,7 +7568,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website/1596', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -7587,7 +7587,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
   "slug": "rest-api-website__trashed",
   "status": "trash",
   "type": "ph-website",
-  "link": "https://bsf.ddev.site/?post_type=ph-website&p=1596&access_token=75867dcfe8b32bf84a969e0c0411c7b8",
+  "link": "https://example.org/?post_type=ph-website&p=1596&access_token=75867dcfe8b32bf84a969e0c0411c7b8",
   "title": {
     "raw": "Rest API website",
     "rendered": "Rest API website"
@@ -7607,7 +7607,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
     "email": "johndoe@gmail.com",
     "url": "",
     "description": "",
-    "link": "https://bsf.ddev.site/author/john/",
+    "link": "https://example.org/author/john/",
     "locale": "en_US",
     "nickname": "john",
     "slug": "john",
@@ -7633,12 +7633,12 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
         }
       ]
     }
@@ -7676,40 +7676,40 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
   "_links": {
     "self": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1596"
       }
     ],
     "collection": [
       {
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        "href": "https://example.org/wp-json/projecthuddle/v2/website"
       }
     ],
     "about": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        "href": "https://example.org/wp-json/wp/v2/types/ph-website"
       }
     ],
     "author": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
       }
     ],
     "members": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
       }
     ],
     "approval_history": [
       {
         "embeddable": true,
-        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
       }
     ],
     "wp:attachment": [
       {
-        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1596"
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1596"
       }
     ],
     "curies": [
@@ -7754,7 +7754,7 @@ const options = {
   }
 };
 
-fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
+fetch('https://example.org/wp-json/projecthuddle/v2/website-page', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -7800,34 +7800,34 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page/1481"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1481"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-webpage"
+          "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
         }
       ],
       "approval_history": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1481&per_page=5&type=approval"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1481&per_page=5&type=approval"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1481"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1481"
         }
       ],
       "curies": [
@@ -7848,7 +7848,7 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
     "slug": "huddle-just-another-wordpress-site",
     "status": "publish",
     "type": "ph-webpage",
-    "link": "https://bsf.ddev.site/website-page/huddle-just-another-wordpress-site/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "link": "https://example.org/website-page/huddle-just-another-wordpress-site/?access_token=87e63af5cb8f4262a8f44e8842341b99",
     "title": {
       "rendered": "Huddle – Just another WordPress site"
     },
@@ -7862,8 +7862,8 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
     "user_order": [
 
     ],
-    "ph_short_link": "https://bsf.ddev.site/?p=1429",
-    "page_url": "https://huddle.ddev.site/",
+    "ph_short_link": "https://example.org/?p=1429",
+    "page_url": "https://testing-site.com/",
     "resolve_status": {
       "total": 4,
       "approved": 0,
@@ -7875,34 +7875,34 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
     "_links": {
       "self": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page/1429"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
         }
       ],
       "collection": [
         {
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
         }
       ],
       "about": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-webpage"
+          "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
         }
       ],
       "approval_history": [
         {
           "embeddable": true,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1429&per_page=5&type=approval"
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1429&per_page=5&type=approval"
         }
       ],
       "up": [
         {
           "embeddable": false,
-          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+          "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
         }
       ],
       "wp:attachment": [
         {
-          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1429"
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1429"
         }
       ],
       "curies": [
@@ -7952,6 +7952,108 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 
 `POST /projecthuddle/v2/website-page`
 
+```javascript
+const form = new FormData();
+form.append("page_url", "https://funola.com/design-draft");
+form.append("parent_id", "1427");
+form.append("title", "Agency Design");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-page', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1652,
+  "date": "2022-05-06T12:55:13",
+  "date_gmt": "2022-05-06T07:25:13",
+  "modified": "2022-05-06T12:55:13",
+  "modified_gmt": "2022-05-06T07:25:13",
+  "password": "",
+  "slug": "agency-design",
+  "status": "publish",
+  "type": "ph-webpage",
+  "link": "https://example.org/website-page/agency-design/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "Agency Design",
+    "rendered": "Agency Design"
+  },
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 1427,
+  "model_type": "page",
+  "user_order": [
+
+  ],
+  "page_url": "https://funola.com/design-draft",
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1652"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1652&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1652"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name           | Located in | Description                                                      | Required | Type         |
@@ -7984,6 +8086,99 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 
 `GET /projecthuddle/v2/website-page/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-page/1652', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1652,
+  "date": "2022-05-06T12:55:13",
+  "date_gmt": "2022-05-06T07:25:13",
+  "modified": "2022-05-06T12:55:13",
+  "modified_gmt": "2022-05-06T07:25:13",
+  "slug": "agency-design",
+  "status": "publish",
+  "type": "ph-webpage",
+  "link": "https://example.org/website-page/agency-design/",
+  "title": {
+    "rendered": "Agency Design"
+  },
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 1427,
+  "model_type": "page",
+  "user_order": [
+
+  ],
+  "ph_short_link": "https://example.org/?p=1652",
+  "page_url": "https://funola.com/design-draft",
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1652"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1652&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1652"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -8005,6 +8200,107 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/website-page/{id}`
+
+```javascript
+const form = new FormData();
+form.append("page_url", "https://funola.com/design-draft-2");
+form.append("title", "Agency Design draft-2");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-page/1652', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1652,
+  "date": "2022-05-06T12:55:13",
+  "date_gmt": "2022-05-06T07:25:13",
+  "modified": "2022-05-06T13:15:04",
+  "modified_gmt": "2022-05-06T07:45:04",
+  "password": "",
+  "slug": "agency-design",
+  "status": "publish",
+  "type": "ph-webpage",
+  "link": "https://example.org/website-page/agency-design/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "Agency Design draft-2",
+    "rendered": "Agency Design draft-2"
+  },
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 1427,
+  "model_type": "page",
+  "user_order": [
+
+  ],
+  "page_url": "https://funola.com/design-draft-2",
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1652"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1652&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1652"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -8037,6 +8333,100 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 
 `DELETE /projecthuddle/v2/website-page/{id}`
 
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-page/1652', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1652,
+  "date": "2022-05-06T12:55:13",
+  "date_gmt": "2022-05-06T07:25:13",
+  "modified": "2022-05-06T13:18:18",
+  "modified_gmt": "2022-05-06T07:48:18",
+  "password": "",
+  "slug": "agency-design__trashed",
+  "status": "trash",
+  "type": "ph-webpage",
+  "link": "https://example.org/?post_type=ph-webpage&p=1652&access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "Agency Design draft-2",
+    "rendered": "Agency Design draft-2"
+  },
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 1427,
+  "model_type": "page",
+  "user_order": [
+
+  ],
+  "page_url": "https://funola.com/design-draft-2",
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1652"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-webpage"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1652&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1652"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name  | Located in | Description                                 | Required | Type    |
@@ -8059,6 +8449,380 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/website-thread`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-thread', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+    {
+    "id": 1597,
+    "date": "2022-05-04T10:43:59",
+    "date_gmt": "2022-05-04T05:13:59",
+    "modified": "2022-05-04T10:43:59",
+    "modified_gmt": "2022-05-04T05:13:59",
+    "slug": "test-comment-1",
+    "status": "publish",
+    "type": "phw_comment_loc",
+    "link": "https://example.org/website-thread/1597/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "test comment-1"
+    },
+    "content": {
+      "rendered": "<p>test comment-1</p>",
+      "protected": false
+    },
+    "author": 22,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1429,
+    "project_id": 1427,
+    "model_type": "website-thread",
+    "members": [
+      20,
+      22
+    ],
+    "screenshot": "https://example.org/wp-content/uploads/ph-screenshots/screenshot_1597.jpg",
+    "path": "div.site-content#content > div.content-area#primary > main.site-main#main > article.post-1.post.type-post.status-publish.format-standard.hentry.category-uncategorized.entry#post-1 > header.entry-header",
+    "xPath": "/div[1]/div[1]/div[1]/main[1]/article[1]/header[1]",
+    "relativeX": 0.19580052493437999,
+    "relativeY": 0.51008064516129004,
+    "pageX": 0.19427083333333001,
+    "pageY": 0.17070289427053001,
+    "html": "",
+    "screenPosition": [
+      0,
+      0.063758389261744972
+    ],
+    "resX": 1920,
+    "resY": 894,
+    "resolved": false,
+    "browser": "Chrome",
+    "browserVersion": 100,
+    "browserOS": "Linux 64-bit",
+    "page_url": "https://testing-site.com/",
+    "page_title": "Huddle – Just another WordPress site",
+    "website_id": 1427,
+    "total_comments": 0,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://example.org/?p=1597",
+    "project_name": "https://testing-site.com/",
+    "item_name": "Huddle – Just another WordPress site",
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1597"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/22"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1597"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1597"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1597"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1506,
+    "date": "2022-04-29T19:51:45",
+    "date_gmt": "2022-04-29T14:21:45",
+    "modified": "2022-04-29T19:51:45",
+    "modified_gmt": "2022-04-29T14:21:45",
+    "slug": "test-comment-2",
+    "status": "publish",
+    "type": "phw_comment_loc",
+    "link": "https://example.org/website-thread/1506/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "test comment-2"
+    },
+    "content": {
+      "rendered": "<p>test comment-2</p>",
+      "protected": false
+    },
+    "author": 17,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1481,
+    "project_id": 1427,
+    "model_type": "website-thread",
+    "members": [
+      16,
+      17,
+      18,
+      21,
+      23,
+      24
+    ],
+    "screenshot": "",
+    "path": "div#conten-editor-wrapper",
+    "xPath": "/div[1]",
+    "relativeX": 0.59330855018587003,
+    "relativeY": 0.36795252225518998,
+    "pageX": 0.59330855018587003,
+    "pageY": 0.27616926503340999,
+    "html": "",
+    "screenPosition": [
+      0,
+      0.059020044543429843
+    ],
+    "resX": 1345,
+    "resY": 898,
+    "resolved": false,
+    "browser": "Chrome",
+    "browserVersion": 100,
+    "browserOS": "Linux 64-bit",
+    "page_url": "https://testing-site.com/",
+    "page_title": "Huddle – Just another WordPress site",
+    "website_id": 1427,
+    "total_comments": 0,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://example.org/?p=1506",
+    "project_name": "https://testing-site.com/",
+    "item_name": "Huddle – Just another WordPress site",
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1506"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/17"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1506"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1506"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1481"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1506"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1505,
+    "date": "2022-04-29T17:46:17",
+    "date_gmt": "2022-04-29T12:16:17",
+    "modified": "2022-04-29T17:46:17",
+    "modified_gmt": "2022-04-29T12:16:17",
+    "slug": "test-comment-3",
+    "status": "publish",
+    "type": "phw_comment_loc",
+    "link": "https://example.org/website-thread/1505/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "test comment-3"
+    },
+    "content": {
+      "rendered": "<p>test comment-3</p>",
+      "protected": false
+    },
+    "author": 18,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1429,
+    "project_id": 1427,
+    "model_type": "website-thread",
+    "members": [
+      16,
+      17,
+      18,
+      21,
+      23,
+      24
+    ],
+    "screenshot": "https://example.org/wp-content/uploads/ph-screenshots/screenshot_1505.jpg",
+    "path": "div.site-content#content > div.content-area#primary > main.site-main#main > article.post-1.post.type-post.status-publish.format-standard.hentry.category-uncategorized.entry#post-1 > header.entry-header",
+    "xPath": "/div[1]/div[1]/div[1]/main[1]/article[1]/header[1]",
+    "relativeX": 0.11578947368421,
+    "relativeY": 0.44556451612902997,
+    "pageX": 0.11449814126394001,
+    "pageY": 0.15438786565547,
+    "html": "",
+    "screenPosition": [
+      0,
+      0.059020044543429843
+    ],
+    "resX": 1345,
+    "resY": 898,
+    "resolved": false,
+    "browser": "Chrome",
+    "browserVersion": 100,
+    "browserOS": "Linux 64-bit",
+    "page_url": "https://testing-site.com/",
+    "page_title": "Huddle – Just another WordPress site",
+    "website_id": 1427,
+    "total_comments": 0,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://example.org/?p=1505",
+    "project_name": "https://testing-site.com/",
+    "item_name": "Huddle – Just another WordPress site",
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1505"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/18"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1505"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1505"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1505"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
+```
 
 **Parameters**
 
@@ -8098,6 +8862,165 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/website-thread`
+
+```javascript
+const form = new FormData();
+form.append("page_url", "https://funola.com/design-draft");
+form.append("content", "Just a fun comment");
+form.append("parent_id", "1429");
+form.append("website_id", "1427");
+form.append("assigned", "16");
+form.append("pageX", "0.16");
+form.append("pageY", "0.19");
+form.append("resX", "1345");
+form.append("resY", "898");
+form.append("browserVersion", "100");
+form.append("author", "20");
+form.append("comment_status", "open");
+form.append("status", "publish");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-thread', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1657,
+  "date": "2022-05-06T13:46:47",
+  "date_gmt": "2022-05-06T08:16:47",
+  "modified": "2022-05-06T13:46:47",
+  "modified_gmt": "2022-05-06T08:16:47",
+  "password": "",
+  "slug": "1657",
+  "status": "publish",
+  "type": "phw_comment_loc",
+  "link": "https://example.org/website-thread/1657/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "",
+    "rendered": ""
+  },
+  "content": {
+    "raw": "Just a fun comment",
+    "rendered": "Just a fun comment",
+    "protected": false
+  },
+  "author": 20,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1429,
+  "project_id": 1427,
+  "model_type": "website-thread",
+  "members": [
+
+  ],
+  "screenshot": "",
+  "path": "",
+  "xPath": "",
+  "relativeX": 0,
+  "relativeY": 0,
+  "pageX": 0.16,
+  "pageY": 0.19,
+  "html": "",
+  "screenPosition": [
+    0,
+    0
+  ],
+  "resX": 1345,
+  "resY": 898,
+  "resolved": false,
+  "browser": "",
+  "browserVersion": 100,
+  "browserOS": "",
+  "page_url": "https://funola.com/design-draft",
+  "page_title": "",
+  "website_id": 1427,
+  "total_comments": 0,
+  "assigned": 16,
+  "comments": [
+
+  ],
+  "comments_count": 0,
+  "activity_count": 0,
+  "project_name": "https://funola.com/design-draft",
+  "item_name": "Huddle – Just another WordPress site",
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1657"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/20"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1657"
+      }
+    ],
+    "assigned": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1657"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1657"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -8151,6 +9074,140 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 
 `GET /projecthuddle/v2/website-thread/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-thread/1598', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1598,
+  "date": "2022-05-04T12:55:26",
+  "date_gmt": "2022-05-04T07:25:26",
+  "modified": "2022-05-04T12:55:26",
+  "modified_gmt": "2022-05-04T07:25:26",
+  "slug": "change-the-color",
+  "status": "publish",
+  "type": "phw_comment_loc",
+  "link": "https://example.org/website-thread/1598/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "rendered": "change the color"
+  },
+  "content": {
+    "rendered": "<p>change the color</p>",
+    "protected": false
+  },
+  "author": 22,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1429,
+  "project_id": 1427,
+  "model_type": "website-thread",
+  "members": [
+    20,
+    22
+  ],
+  "screenshot": "https://example.org/wp-content/uploads/ph-screenshots/screenshot_1598.jpg",
+  "path": "",
+  "xPath": "/div[1]/div[1]/div[1]/main[1]/article[1]/div[1]",
+  "relativeX": 0.23307086614173,
+  "relativeY": 0.72403492647058998,
+  "pageX": 0.23125000000000001,
+  "pageY": 0.23567631423509,
+  "html": "",
+  "screenPosition": [
+    0,
+    0.063758389261744972
+  ],
+  "resX": 1920,
+  "resY": 894,
+  "resolved": false,
+  "browser": "Chrome",
+  "browserVersion": 100,
+  "browserOS": "Linux 64-bit",
+  "page_url": "https://funola.com/design-draft",
+  "page_title": "Huddle – Just another WordPress site",
+  "website_id": 1427,
+  "total_comments": 0,
+  "assigned": 0,
+  "comments": [
+
+  ],
+  "comments_count": 1,
+  "activity_count": 1,
+  "ph_short_link": "https://example.org/?p=1598",
+  "project_name": "https://funola.com/design-draft",
+  "item_name": "Huddle – Just another WordPress site",
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1598"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/22"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1598"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -8172,6 +9229,217 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/website-thread/{id}`
+
+```javascript
+const form = new FormData();
+form.append("title", "Rest the comment");
+form.append("content", "PH is awesome");
+form.append("author", "20");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-thread/1598', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1598,
+  "date": "2022-05-04T12:55:26",
+  "date_gmt": "2022-05-04T07:25:26",
+  "modified": "2022-05-06T15:42:02",
+  "modified_gmt": "2022-05-06T10:12:02",
+  "password": "",
+  "slug": "just-a-comment",
+  "status": "publish",
+  "type": "phw_comment_loc",
+  "link": "https://example.org/website-thread/1598/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "Rest the comment",
+    "rendered": "Rest the comment"
+  },
+  "content": {
+    "raw": "PH is awesome",
+    "rendered": "<p>PH is awesome</p>",
+    "protected": false
+  },
+  "author": 20,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1429,
+  "project_id": 1427,
+  "model_type": "website-thread",
+  "members": [
+    20,
+    22
+  ],
+  "screenshot": "https://example.org/wp-content/uploads/ph-screenshots/screenshot_1598.jpg",
+  "path": "div.site-content#content > div.content-area#primary > main.site-main#main > article.post-1.post.type-post.status-publish.format-standard.hentry.category-uncategorized.entry#post-1 > div.entry-content",
+  "xPath": "/div[1]/div[1]/div[1]/main[1]/article[1]/div[1]",
+  "relativeX": 0.23307086614173,
+  "relativeY": 0.72403492647058998,
+  "pageX": 0.23125000000000001,
+  "pageY": 0.23567631423509,
+  "html": "",
+  "screenPosition": [
+    0,
+    0.063758389261744972
+  ],
+  "resX": 1920,
+  "resY": 894,
+  "resolved": false,
+  "browser": "Chrome",
+  "browserVersion": 100,
+  "browserOS": "Linux 64-bit",
+  "page_url": "https://testing-site.com/",
+  "page_title": "Huddle – Just another WordPress site",
+  "website_id": 1427,
+  "total_comments": 0,
+  "assigned": 0,
+  "comments": [
+    {
+      "id": 185,
+      "post": 1598,
+      "parent": 0,
+      "author": 22,
+      "author_name": "John",
+      "author_url": "",
+      "date": "2022-05-04T12:55:26",
+      "date_gmt": "2022-05-04T07:25:26",
+      "content": {
+        "rendered": "<p>PH is awesome</p>"
+      },
+      "link": "https://example.org/website-thread/1598/?access_token=87e63af5cb8f4262a8f44e8842341b99/",
+      "status": "approved",
+      "type": "ph_comment",
+      "project_id": 1427,
+      "item_id": 1429,
+      "author_avatar_urls": {
+        "24": "https://secure.gravatar.com/avatar/9ad574806427070b94735f216e9abdc1?s=24&d=mm&r=g",
+        "48": "https://secure.gravatar.com/avatar/9ad574806427070b94735f216e9abdc1?s=48&d=mm&r=g",
+        "96": "https://secure.gravatar.com/avatar/9ad574806427070b94735f216e9abdc1?s=96&d=mm&r=g"
+      },
+      "meta": [
+
+      ],
+      "comment_post_type": "thread",
+      "approval": false,
+      "is_private": false,
+      "_links": {
+        "self": [
+          {
+            "href": "https://example.org/wp-json/projecthuddle/v2/comments/185"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://example.org/wp-json/projecthuddle/v2/comments"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://example.org/wp-json/wp/v2/users/22"
+          }
+        ],
+        "up": [
+          {
+            "embeddable": true,
+            "post_type": "phw_comment_loc",
+            "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1598"
+          }
+        ],
+        "item": [
+          {
+            "embeddable": true,
+            "post_type": "website-page",
+            "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+          }
+        ],
+        "project": [
+          {
+            "embeddable": true,
+            "post_type": "website",
+            "href": "https://example.org/wp-json/projecthuddle/v2/website/1427"
+          }
+        ]
+      }
+    }
+  ],
+  "comments_count": 1,
+  "activity_count": 1,
+  "project_name": "https://testing-site.com/",
+  "item_name": "Huddle – Just another WordPress site",
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1598"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/20"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1598"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -8223,6 +9491,142 @@ fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
 ### HTTP Request
 
 `DELETE /projecthuddle/v2/website-thread/{id}`
+
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/website-thread/1598', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1598,
+  "date": "2022-05-04T12:55:26",
+  "date_gmt": "2022-05-04T07:25:26",
+  "modified": "2022-05-06T15:48:44",
+  "modified_gmt": "2022-05-06T10:18:44",
+  "password": "",
+  "slug": "just-a-comment__trashed",
+  "status": "trash",
+  "type": "phw_comment_loc",
+  "link": "https://bsf.?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "Rest the comment",
+    "rendered": "Rest the comment"
+  },
+  "content": {
+    "raw": "PH is awesome",
+    "rendered": "<p>PH is awesome</p>",
+    "protected": false
+  },
+  "author": 20,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1429,
+  "project_id": 1427,
+  "model_type": "website-thread",
+  "members": [
+    20,
+    22
+  ],
+  "screenshot": "https://example.org/wp-content/uploads/ph-screenshots/screenshot_1598.jpg",
+  "path": "div.site-content#content > div.content-area#primary > main.site-main#main > article.post-1.post.type-post.status-publish.format-standard.hentry.category-uncategorized.entry#post-1 > div.entry-content",
+  "xPath": "/div[1]/div[1]/div[1]/main[1]/article[1]/div[1]",
+  "relativeX": 0.23307086614173,
+  "relativeY": 0.72403492647058998,
+  "pageX": 0.23125000000000001,
+  "pageY": 0.23567631423509,
+  "html": "",
+  "screenPosition": [
+    0,
+    0.063758389261744972
+  ],
+  "resX": 1920,
+  "resY": 894,
+  "resolved": false,
+  "browser": "Chrome",
+  "browserVersion": 100,
+  "browserOS": "Linux 64-bit",
+  "page_url": "https://testing-site.com/",
+  "page_title": "Huddle – Just another WordPress site",
+  "website_id": 1427,
+  "total_comments": 0,
+  "assigned": 0,
+  "comments": [
+
+  ],
+  "comments_count": 0,
+  "activity_count": 0,
+  "project_name": "https://testing-site.com/",
+  "item_name": "Huddle – Just another WordPress site",
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread/1598"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/phw_comment_loc"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/20"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1598"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://example.org/wp-json/projecthuddle/v2/website-page/1429"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1598"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
