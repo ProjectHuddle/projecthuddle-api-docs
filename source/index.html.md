@@ -2835,6 +2835,263 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/mockup`
 
+```javascript
+const options = {method: 'GET'};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON ouput
+
+```json
+[
+  {
+    "id": 180,
+    "date": "2022-03-29T09:24:23",
+    "date_gmt": "2022-03-29T03:54:23",
+    "modified": "2022-04-26T10:28:25",
+    "modified_gmt": "2022-04-26T04:58:25",
+    "slug": "huddle-mock",
+    "status": "publish",
+    "type": "ph-project",
+    "link": "https://example.org/mockup/huddle-mock/",
+    "title": {
+      "rendered": "Huddle Mock"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 16,
+    "parent": 0,
+    "meta": {
+    },
+    "model_type": "mockup",
+    "ph_short_link": "https://example.org/?p=180",
+    "project_access": "login",
+    "thread_subscribers": "all",
+    "retina": false,
+    "sharing": true,
+    "zoom": true,
+    "tooltip": true,
+    "allow_guests": true,
+    "force_login": true,
+    "project_download": false,
+    "project_comments": false,
+    "project_approval": true,
+    "project_unapproval": true,
+    "access_token": "",
+    "project_members": [
+      17,
+      22
+    ],
+    "resolve_status": {
+      "total": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "items_status": {
+      "total": 1,
+      "approved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "me": {
+      "code": "rest_not_logged_in",
+      "message": "You are not currently logged in.",
+      "data": {
+        "status": 401
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "members": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users?include=17,22&per_page=100"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=180&per_page=5&type=approval"
+        }
+      ],
+      "images": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=180"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=180"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "date": "2022-03-24T15:27:22",
+    "date_gmt": "2022-03-24T09:57:22",
+    "modified": "2022-04-25T16:30:29",
+    "modified_gmt": "2022-04-25T11:00:29",
+    "slug": "test-mock",
+    "status": "publish",
+    "type": "ph-project",
+    "link": "https://example.org/mockup/test-mock/",
+    "title": {
+      "rendered": "Test mock"
+    },
+    "content": {
+      "rendered": "",
+      "protected": true
+    },
+    "author": 16,
+    "parent": 0,
+    "meta": {
+      "site-sidebar-layout": "default",
+      "site-content-layout": "default",
+      "ast-main-header-display": "",
+      "ast-hfb-above-header-display": "",
+      "ast-hfb-below-header-display": "",
+      "ast-hfb-mobile-header-display": "",
+      "site-post-title": "",
+      "ast-breadcrumbs-content": "",
+      "ast-featured-img": "",
+      "footer-sml-layout": "",
+      "theme-transparent-header-meta": "default",
+      "adv-header-id-meta": "",
+      "stick-header-meta": "",
+      "header-above-stick-meta": "",
+      "header-main-stick-meta": "",
+      "header-below-stick-meta": ""
+    },
+    "model_type": "mockup",
+    "ph_short_link": "https://example.org/?p=97",
+    "project_access": "login",
+    "thread_subscribers": "all",
+    "retina": false,
+    "sharing": true,
+    "zoom": true,
+    "tooltip": true,
+    "allow_guests": true,
+    "force_login": true,
+    "project_download": false,
+    "project_comments": false,
+    "project_approval": true,
+    "project_unapproval": true,
+    "access_token": "",
+    "project_members": [
+
+    ],
+    "resolve_status": {
+      "total": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "items_status": {
+      "total": 0,
+      "approved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "me": {
+      "code": "rest_not_logged_in",
+      "message": "You are not currently logged in.",
+      "data": {
+        "status": 401
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup/97"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "members": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/users?include=&per_page=100"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=97&per_page=5&type=approval"
+        }
+      ],
+      "images": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=97"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=97"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
+```
+
 **Parameters**
 
 | Name           | Located in | Description                                                                   | Required | Type             |
@@ -2870,6 +3127,279 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup`
+
+```javascript
+const form = new FormData();
+form.append("title", "New mockup");
+form.append("author", "21");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1471,
+  "date": "2022-04-26T14:53:29",
+  "date_gmt": "2022-04-26T09:23:29",
+  "modified": "2022-04-26T14:53:29",
+  "modified_gmt": "2022-04-26T09:23:29",
+  "password": "",
+  "slug": "new-mockup",
+  "status": "publish",
+  "type": "ph-project",
+  "link": "https://example.org/mockup/new-mockup/?access_token=43c38077aaf19758c4f7d0f26cad8281",
+  "title": {
+    "raw": "New mockup",
+    "rendered": "New mockup"
+  },
+  "content": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "author": 21,
+  "parent": 0,
+  "meta": {
+  },
+  "model_type": "mockup",
+  "project_access": "login",
+  "thread_subscribers": "all",
+  "retina": false,
+  "sharing": true,
+  "zoom": true,
+  "tooltip": true,
+  "allow_guests": false,
+  "force_login": false,
+  "project_download": false,
+  "project_comments": false,
+  "project_approval": true,
+  "project_unapproval": true,
+  "access_token": "43c38077aaf19758c4f7d0f26cad8281",
+  "project_members": [
+
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "me": {
+    "id": 21,
+    "username": "ph-admin",
+    "name": "ph-admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "ph-admin@ph.com",
+    "url": "",
+    "description": "",
+    "link": "https://example.org/author/ph-admin/",
+    "locale": "en_US",
+    "nickname": "ph-admin",
+    "slug": "ph-admin",
+    "roles": [
+      "project_admin"
+    ],
+    "user_role": "Project Administrator",
+    "registered_date": "2022-04-18T10:03:45+00:00",
+    "capabilities": {
+      "read": true,
+      "moderate_comments": true,
+      "edit_comment_meta": true,
+      "upload_files": true,
+      "list_users": true,
+      "manage_ph_settings": true,
+      "publish_ph_comment_locations": true,
+      "edit_ph_comment_locations": true,
+      "edit_others_ph_comment_locations": true,
+      "read_private_ph_comment_locations": true,
+      "delete_ph_comment_locations": true,
+      "delete_private_ph_comment_locations": true,
+      "delete_published_ph_comment_locations": true,
+      "edit_private_ph_comment_locations": true,
+      "edit_published_ph_comment_locations": true,
+      "publish_project_images": true,
+      "publish_ph-webpages": true,
+      "edit_ph-webpages": true,
+      "edit_others_ph-webpages": true,
+      "read_private_ph-webpages": true,
+      "delete_ph-webpages": true,
+      "delete_private_ph-webpages": true,
+      "delete_published_ph-webpages": true,
+      "edit_private_ph-webpages": true,
+      "edit_published_ph-webpages": true,
+      "publish_phw_comment_locs": true,
+      "edit_phw_comment_locs": true,
+      "edit_others_phw_comment_locs": true,
+      "read_private_phw_comment_locs": true,
+      "delete_phw_comment_locs": true,
+      "delete_private_phw_comment_locs": true,
+      "delete_published_phw_comment_locs": true,
+      "edit_private_phw_comment_locs": true,
+      "edit_published_phw_comment_locs": true,
+      "read_ph-project": true,
+      "read_ph-projects": true,
+      "read_private_ph-projects": true,
+      "read_ph_version": true,
+      "read_ph_versions": true,
+      "read_private_ph_versions": true,
+      "read_ph-website": true,
+      "read_ph-websites": true,
+      "read_private_ph-websites": true,
+      "create_ph-projects": true,
+      "delete_ph-project": true,
+      "edit_ph-projects": true,
+      "edit_others_ph-projects": true,
+      "publish_ph-projects": true,
+      "delete_ph-projects": true,
+      "delete_private_ph-projects": true,
+      "delete_published_ph-projects": true,
+      "delete_others_ph-projects": true,
+      "edit_private_ph-projects": true,
+      "edit_published_ph-projects": true,
+      "view_unsubscribed_ph-projects": true,
+      "manage_ph-project_terms": true,
+      "edit_ph-project_terms": true,
+      "delete_ph-project_terms": true,
+      "assign_ph-project_terms": true,
+      "create_ph_versions": true,
+      "delete_ph_version": true,
+      "edit_ph_versions": true,
+      "edit_others_ph_versions": true,
+      "publish_ph_versions": true,
+      "delete_ph_versions": true,
+      "delete_private_ph_versions": true,
+      "delete_published_ph_versions": true,
+      "delete_others_ph_versions": true,
+      "edit_private_ph_versions": true,
+      "edit_published_ph_versions": true,
+      "view_unsubscribed_ph_versions": true,
+      "manage_ph_version_terms": true,
+      "edit_ph_version_terms": true,
+      "delete_ph_version_terms": true,
+      "assign_ph_version_terms": true,
+      "create_ph-websites": true,
+      "delete_ph-website": true,
+      "edit_ph-websites": true,
+      "edit_others_ph-websites": true,
+      "publish_ph-websites": true,
+      "delete_ph-websites": true,
+      "delete_private_ph-websites": true,
+      "delete_published_ph-websites": true,
+      "delete_others_ph-websites": true,
+      "edit_private_ph-websites": true,
+      "edit_published_ph-websites": true,
+      "view_unsubscribed_ph-websites": true,
+      "manage_ph-website_terms": true,
+      "edit_ph-website_terms": true,
+      "delete_ph-website_terms": true,
+      "assign_ph-website_terms": true,
+      "delete_others_ph_comment_locations": true,
+      "delete_others_project_images": true,
+      "delete_others_ph-webpages": true,
+      "delete_others_phw_comment_locs": true,
+      "project_admin": true
+    },
+    "extra_capabilities": {
+      "project_admin": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/1471"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1471&per_page=5&type=approval"
+      }
+    ],
+    "images": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=1471"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1471"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -2910,6 +3440,286 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/mockup/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup/180', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON ouput
+
+```json
+{
+  "id": 180,
+  "date": "2022-03-29T09:24:23",
+  "date_gmt": "2022-03-29T03:54:23",
+  "modified": "2022-04-26T10:28:25",
+  "modified_gmt": "2022-04-26T04:58:25",
+  "slug": "huddle-mock",
+  "status": "publish",
+  "type": "ph-project",
+  "link": "https://example.org/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "title": {
+    "rendered": "Huddle Mock"
+  },
+  "content": {
+    "rendered": "",
+    "protected": false
+  },
+  "author": 16,
+  "parent": 0,
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "default",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "default",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": ""
+  },
+  "model_type": "mockup",
+  "ph_short_link": "https://example.org/?p=180",
+  "project_access": "login",
+  "thread_subscribers": "all",
+  "retina": false,
+  "sharing": true,
+  "zoom": true,
+  "tooltip": true,
+  "allow_guests": true,
+  "force_login": true,
+  "project_download": false,
+  "project_comments": false,
+  "project_approval": true,
+  "project_unapproval": true,
+  "access_token": "ce635f81fd0b4c77decf759a9919deec",
+  "project_members": [
+    17,
+    22
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "items_status": {
+    "total": 1,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "me": {
+    "id": 21,
+    "username": "ph-admin",
+    "name": "ph-admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "ph-admin@ph.com",
+    "url": "",
+    "description": "",
+    "link": "https://example.org/author/ph-admin/",
+    "locale": "en_US",
+    "nickname": "ph-admin",
+    "slug": "ph-admin",
+    "roles": [
+      "project_admin"
+    ],
+    "user_role": "Project Administrator",
+    "registered_date": "2022-04-18T10:03:45+00:00",
+    "capabilities": {
+      "read": true,
+      "moderate_comments": true,
+      "edit_comment_meta": true,
+      "upload_files": true,
+      "list_users": true,
+      "manage_ph_settings": true,
+      "publish_ph_comment_locations": true,
+      "edit_ph_comment_locations": true,
+      "edit_others_ph_comment_locations": true,
+      "read_private_ph_comment_locations": true,
+      "delete_ph_comment_locations": true,
+      "delete_private_ph_comment_locations": true,
+      "delete_published_ph_comment_locations": true,
+      "edit_private_ph_comment_locations": true,
+      "edit_published_ph_comment_locations": true,
+      "publish_ph-webpages": true,
+      "edit_ph-webpages": true,
+      "edit_others_ph-webpages": true,
+      "read_private_ph-webpages": true,
+      "delete_ph-webpages": true,
+      "delete_private_ph-webpages": true,
+      "delete_published_ph-webpages": true,
+      "edit_private_ph-webpages": true,
+      "edit_published_ph-webpages": true,
+      "publish_phw_comment_locs": true,
+      "edit_phw_comment_locs": true,
+      "edit_others_phw_comment_locs": true,
+      "read_private_phw_comment_locs": true,
+      "delete_phw_comment_locs": true,
+      "delete_private_phw_comment_locs": true,
+      "delete_published_phw_comment_locs": true,
+      "edit_private_phw_comment_locs": true,
+      "edit_published_phw_comment_locs": true,
+      "read_ph-project": true,
+      "read_ph-projects": true,
+      "read_private_ph-projects": true,
+      "read_ph_version": true,
+      "read_ph_versions": true,
+      "read_private_ph_versions": true,
+      "read_ph-website": true,
+      "read_ph-websites": true,
+      "read_private_ph-websites": true,
+      "create_ph-projects": true,
+      "delete_ph-project": true,
+      "edit_ph-projects": true,
+      "edit_others_ph-projects": true,
+      "publish_ph-projects": true,
+      "delete_ph-projects": true,
+      "delete_private_ph-projects": true,
+      "delete_published_ph-projects": true,
+      "delete_others_ph-projects": true,
+      "edit_private_ph-projects": true,
+      "edit_published_ph-projects": true,
+      "view_unsubscribed_ph-projects": true,
+      "manage_ph-project_terms": true,
+      "edit_ph-project_terms": true,
+      "delete_ph-project_terms": true,
+      "assign_ph-project_terms": true,
+      "create_ph_versions": true,
+      "delete_ph_version": true,
+      "edit_ph_versions": true,
+      "edit_others_ph_versions": true,
+      "publish_ph_versions": true,
+      "delete_ph_versions": true,
+      "delete_private_ph_versions": true,
+      "delete_published_ph_versions": true,
+      "delete_others_ph_versions": true,
+      "edit_private_ph_versions": true,
+      "edit_published_ph_versions": true,
+      "view_unsubscribed_ph_versions": true,
+      "manage_ph_version_terms": true,
+      "edit_ph_version_terms": true,
+      "delete_ph_version_terms": true,
+      "assign_ph_version_terms": true,
+      "create_ph-websites": true,
+      "delete_ph-website": true,
+      "edit_ph-websites": true,
+      "edit_others_ph-websites": true,
+      "publish_ph-websites": true,
+      "delete_ph-websites": true,
+      "delete_private_ph-websites": true,
+      "delete_published_ph-websites": true,
+      "delete_others_ph-websites": true,
+      "edit_private_ph-websites": true,
+      "edit_published_ph-websites": true,
+      "view_unsubscribed_ph-websites": true,
+      "manage_ph-website_terms": true,
+      "edit_ph-website_terms": true,
+      "delete_ph-website_terms": true,
+      "assign_ph-website_terms": true,
+      "delete_others_ph_comment_locations": true,
+      "delete_others_project_images": true,
+      "delete_others_ph-webpages": true,
+      "delete_others_phw_comment_locs": true,
+      "project_admin": true
+    },
+    "extra_capabilities": {
+      "project_admin": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=17,22&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=180&per_page=5&type=approval"
+      }
+    ],
+    "images": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=180"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=180"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -2931,6 +3741,284 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup/{id}`
+
+```javascript
+const form = new FormData();
+form.append("access_link_login", "true");
+form.append("sharing", "true");
+form.append("project_comments", "true");
+form.append("retina", "true");
+form.append("project_members", "16, 18, 21");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup/1471', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1471,
+  "date": "2022-04-26T14:53:29",
+  "date_gmt": "2022-04-26T09:23:29",
+  "modified": "2022-04-26T15:11:19",
+  "modified_gmt": "2022-04-26T09:41:19",
+  "password": "",
+  "slug": "new-mockup",
+  "status": "publish",
+  "type": "ph-project",
+  "link": "https://example.org/mockup/new-mockup/?access_token=43c38077aaf19758c4f7d0f26cad8281",
+  "title": {
+    "raw": "New mockup",
+    "rendered": "New mockup"
+  },
+  "content": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "author": 21,
+  "parent": 0,
+  "meta": {
+  },
+  "model_type": "mockup",
+  "project_access": "",
+  "thread_subscribers": "all",
+  "retina": true,
+  "sharing": true,
+  "zoom": true,
+  "tooltip": true,
+  "allow_guests": false,
+  "force_login": false,
+  "project_download": false,
+  "project_comments": true,
+  "project_approval": true,
+  "project_unapproval": true,
+  "access_token": "43c38077aaf19758c4f7d0f26cad8281",
+  "project_members": [
+    16,
+    18,
+    20,
+    21
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "me": {
+    "id": 21,
+    "username": "ph-admin",
+    "name": "ph-admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "ph-admin@ph.com",
+    "url": "",
+    "description": "",
+    "link": "https://example.org/author/ph-admin/",
+    "locale": "en_US",
+    "nickname": "ph-admin",
+    "slug": "ph-admin",
+    "roles": [
+      "project_admin"
+    ],
+    "user_role": "Project Administrator",
+    "registered_date": "2022-04-18T10:03:45+00:00",
+    "capabilities": {
+      "read": true,
+      "moderate_comments": true,
+      "edit_comment_meta": true,
+      "upload_files": true,
+      "list_users": true,
+      "manage_ph_settings": true,
+      "publish_ph_comment_locations": true,
+      "edit_ph_comment_locations": true,
+      "edit_others_ph_comment_locations": true,
+      "read_private_ph_comment_locations": true,
+      "delete_ph_comment_locations": true,
+      "delete_private_ph_comment_locations": true,
+      "delete_published_ph_comment_locations": true,
+      "edit_private_ph_comment_locations": true,
+      "edit_published_ph_comment_locations": true,
+      "publish_ph-webpages": true,
+      "edit_ph-webpages": true,
+      "edit_others_ph-webpages": true,
+      "read_private_ph-webpages": true,
+      "delete_ph-webpages": true,
+      "delete_private_ph-webpages": true,
+      "delete_published_ph-webpages": true,
+      "edit_private_ph-webpages": true,
+      "edit_published_ph-webpages": true,
+      "publish_phw_comment_locs": true,
+      "edit_phw_comment_locs": true,
+      "edit_others_phw_comment_locs": true,
+      "read_private_phw_comment_locs": true,
+      "delete_phw_comment_locs": true,
+      "delete_private_phw_comment_locs": true,
+      "delete_published_phw_comment_locs": true,
+      "edit_private_phw_comment_locs": true,
+      "edit_published_phw_comment_locs": true,
+      "read_ph-project": true,
+      "read_ph-projects": true,
+      "read_private_ph-projects": true,
+      "read_ph_version": true,
+      "read_ph_versions": true,
+      "read_private_ph_versions": true,
+      "read_ph-website": true,
+      "read_ph-websites": true,
+      "read_private_ph-websites": true,
+      "create_ph-projects": true,
+      "delete_ph-project": true,
+      "edit_ph-projects": true,
+      "edit_others_ph-projects": true,
+      "publish_ph-projects": true,
+      "delete_ph-projects": true,
+      "delete_private_ph-projects": true,
+      "delete_published_ph-projects": true,
+      "delete_others_ph-projects": true,
+      "edit_private_ph-projects": true,
+      "edit_published_ph-projects": true,
+      "view_unsubscribed_ph-projects": true,
+      "manage_ph-project_terms": true,
+      "edit_ph-project_terms": true,
+      "delete_ph-project_terms": true,
+      "assign_ph-project_terms": true,
+      "create_ph_versions": true,
+      "delete_ph_version": true,
+      "edit_ph_versions": true,
+      "edit_others_ph_versions": true,
+      "publish_ph_versions": true,
+      "delete_ph_versions": true,
+      "delete_private_ph_versions": true,
+      "delete_published_ph_versions": true,
+      "delete_others_ph_versions": true,
+      "edit_private_ph_versions": true,
+      "edit_published_ph_versions": true,
+      "view_unsubscribed_ph_versions": true,
+      "manage_ph_version_terms": true,
+      "edit_ph_version_terms": true,
+      "delete_ph_version_terms": true,
+      "assign_ph_version_terms": true,
+      "create_ph-websites": true,
+      "delete_ph-website": true,
+      "edit_ph-websites": true,
+      "edit_others_ph-websites": true,
+      "publish_ph-websites": true,
+      "delete_ph-websites": true,
+      "delete_private_ph-websites": true,
+      "delete_published_ph-websites": true,
+      "delete_others_ph-websites": true,
+      "edit_private_ph-websites": true,
+      "edit_published_ph-websites": true,
+      "view_unsubscribed_ph-websites": true,
+      "manage_ph-website_terms": true,
+      "edit_ph-website_terms": true,
+      "delete_ph-website_terms": true,
+      "assign_ph-website_terms": true,
+      "delete_others_ph_comment_locations": true,
+      "delete_others_project_images": true,
+      "delete_others_ph-webpages": true,
+      "delete_others_phw_comment_locs": true,
+      "project_admin": true
+    },
+    "extra_capabilities": {
+      "project_admin": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/1471"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,18,20,21&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1471&per_page=5&type=approval"
+      }
+    ],
+    "images": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=1471"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1471"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -2970,6 +4058,290 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `DELETE /projecthuddle/v2/mockup/{id}`
 
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOEKN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup/1471', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1471,
+  "date": "2022-04-26T14:53:29",
+  "date_gmt": "2022-04-26T09:23:29",
+  "modified": "2022-04-26T15:13:08",
+  "modified_gmt": "2022-04-26T09:43:08",
+  "password": "",
+  "slug": "new-mockup__trashed",
+  "status": "trash",
+  "type": "ph-project",
+  "link": "https://example.org/?post_type=ph-project&p=1471&access_token=43c38077aaf19758c4f7d0f26cad8281",
+  "title": {
+    "raw": "New mockup",
+    "rendered": "New mockup"
+  },
+  "content": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "author": 21,
+  "parent": 0,
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "default",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": ""
+  },
+  "model_type": "mockup",
+  "project_access": "",
+  "thread_subscribers": "all",
+  "retina": true,
+  "sharing": true,
+  "zoom": true,
+  "tooltip": true,
+  "allow_guests": false,
+  "force_login": false,
+  "project_download": false,
+  "project_comments": true,
+  "project_approval": true,
+  "project_unapproval": true,
+  "access_token": "43c38077aaf19758c4f7d0f26cad8281",
+  "project_members": [
+    16,
+    18,
+    20,
+    21
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "me": {
+    "id": 21,
+    "username": "ph-admin",
+    "name": "ph-admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "ph-admin@ph.com",
+    "url": "",
+    "description": "",
+    "link": "https://example.org/author/ph-admin/",
+    "locale": "en_US",
+    "nickname": "ph-admin",
+    "slug": "ph-admin",
+    "roles": [
+      "project_admin"
+    ],
+    "user_role": "Project Administrator",
+    "registered_date": "2022-04-18T10:03:45+00:00",
+    "capabilities": {
+      "read": true,
+      "moderate_comments": true,
+      "edit_comment_meta": true,
+      "upload_files": true,
+      "list_users": true,
+      "manage_ph_settings": true,
+      "publish_ph_comment_locations": true,
+      "edit_ph_comment_locations": true,
+      "edit_others_ph_comment_locations": true,
+      "read_private_ph_comment_locations": true,
+      "delete_ph_comment_locations": true,
+      "delete_private_ph_comment_locations": true,
+      "delete_published_ph_comment_locations": true,
+      "edit_private_ph_comment_locations": true,
+      "edit_published_ph_comment_locations": true,
+      "publish_ph-webpages": true,
+      "edit_ph-webpages": true,
+      "edit_others_ph-webpages": true,
+      "read_private_ph-webpages": true,
+      "delete_ph-webpages": true,
+      "delete_private_ph-webpages": true,
+      "delete_published_ph-webpages": true,
+      "edit_private_ph-webpages": true,
+      "edit_published_ph-webpages": true,
+      "publish_phw_comment_locs": true,
+      "edit_phw_comment_locs": true,
+      "edit_others_phw_comment_locs": true,
+      "read_private_phw_comment_locs": true,
+      "delete_phw_comment_locs": true,
+      "delete_private_phw_comment_locs": true,
+      "delete_published_phw_comment_locs": true,
+      "edit_private_phw_comment_locs": true,
+      "edit_published_phw_comment_locs": true,
+      "read_ph-project": true,
+      "read_ph-projects": true,
+      "read_private_ph-projects": true,
+      "read_ph_version": true,
+      "read_ph_versions": true,
+      "read_private_ph_versions": true,
+      "read_ph-website": true,
+      "read_ph-websites": true,
+      "read_private_ph-websites": true,
+      "create_ph-projects": true,
+      "delete_ph-project": true,
+      "edit_ph-projects": true,
+      "edit_others_ph-projects": true,
+      "publish_ph-projects": true,
+      "delete_ph-projects": true,
+      "delete_private_ph-projects": true,
+      "delete_published_ph-projects": true,
+      "delete_others_ph-projects": true,
+      "edit_private_ph-projects": true,
+      "edit_published_ph-projects": true,
+      "view_unsubscribed_ph-projects": true,
+      "manage_ph-project_terms": true,
+      "edit_ph-project_terms": true,
+      "delete_ph-project_terms": true,
+      "assign_ph-project_terms": true,
+      "create_ph_versions": true,
+      "delete_ph_version": true,
+      "edit_ph_versions": true,
+      "edit_others_ph_versions": true,
+      "publish_ph_versions": true,
+      "delete_ph_versions": true,
+      "delete_private_ph_versions": true,
+      "delete_published_ph_versions": true,
+      "delete_others_ph_versions": true,
+      "edit_private_ph_versions": true,
+      "edit_published_ph_versions": true,
+      "view_unsubscribed_ph_versions": true,
+      "manage_ph_version_terms": true,
+      "edit_ph_version_terms": true,
+      "delete_ph_version_terms": true,
+      "assign_ph_version_terms": true,
+      "create_ph-websites": true,
+      "delete_ph-website": true,
+      "edit_ph-websites": true,
+      "edit_others_ph-websites": true,
+      "publish_ph-websites": true,
+      "delete_ph-websites": true,
+      "delete_private_ph-websites": true,
+      "delete_published_ph-websites": true,
+      "delete_others_ph-websites": true,
+      "edit_private_ph-websites": true,
+      "edit_published_ph-websites": true,
+      "view_unsubscribed_ph-websites": true,
+      "manage_ph-website_terms": true,
+      "edit_ph-website_terms": true,
+      "delete_ph-website_terms": true,
+      "assign_ph-website_terms": true,
+      "delete_others_ph_comment_locations": true,
+      "delete_others_project_images": true,
+      "delete_others_ph-webpages": true,
+      "delete_others_phw_comment_locs": true,
+      "project_admin": true
+    },
+    "extra_capabilities": {
+      "project_admin": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/aa9dbc0b2851fc84bfda834edadff893?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/1471"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/ph-project"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users/21"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/users?include=16,18,20,21&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1471&per_page=5&type=approval"
+      }
+    ],
+    "images": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image?parent_id=1471"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1471"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name  | Located in | Description                                 | Required | Type    |
@@ -2992,6 +4364,227 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/mockup-image`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+  {
+    "id": 1469,
+    "date": "2022-04-26T15:18:23",
+    "date_gmt": "2022-04-26T09:48:23",
+    "modified": "2022-04-26T15:18:23",
+    "modified_gmt": "2022-04-26T09:48:23",
+    "slug": "18a1425e-ea0c-3eda-8685-0070273be067",
+    "status": "publish",
+    "type": "image",
+    "link": "https://example.org/mockup/test-mock/?access_token=52e76d9fcd0c7b7783156bfcf38174d9#18a1425e-ea0c-3eda-8685-0070273be067",
+    "title": {
+      "rendered": "4b86a172-87cf-30b3-b6fa-2d53a1ebcabf"
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1300,
+    "parent": 0,
+    "menu_order": 0,
+    "meta": {
+    },
+    "parent_id": 97,
+    "model_type": "image",
+    "current_version": "2",
+    "sketch_id": "",
+    "ph_short_link": "https://example.org/?p=1469",
+    "options": {
+      "alignment": "center",
+      "size": "scale",
+      "background_color": "#15181C",
+      "background_image": "",
+      "background_image_position": "http://center"
+    },
+    "approved": false,
+    "approval_data": {
+      "by": false,
+      "on": false
+    },
+    "resolve_status": {
+      "total": 0,
+      "approved": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "is_private": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1469"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/project_image"
+        }
+      ],
+      "versions": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1469/versions"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1469&per_page=5&type=approval"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup/97"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/media/1300"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1469"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1468,
+    "date": "2022-04-26T15:17:44",
+    "date_gmt": "2022-04-26T09:47:44",
+    "modified": "2022-04-26T15:17:44",
+    "modified_gmt": "2022-04-26T09:47:44",
+    "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+    "status": "publish",
+    "type": "image",
+    "link": "https://example.org/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
+    "title": {
+      "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1379,
+    "parent": 0,
+    "menu_order": 0,
+    "meta": {
+    },
+    "parent_id": 180,
+    "model_type": "image",
+    "current_version": "2",
+    "sketch_id": "",
+    "ph_short_link": "https://example.org/?p=1468",
+    "options": {
+      "alignment": "center",
+      "size": "scale",
+      "background_color": "#15181C",
+      "background_image": "",
+      "background_image_position": "http://center"
+    },
+    "approved": false,
+    "approval_data": {
+      "by": false,
+      "on": false
+    },
+    "resolve_status": {
+      "total": 0,
+      "approved": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "is_private": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/types/project_image"
+        }
+      ],
+      "versions": [
+        {
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1468/versions"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://example.org/wp-json/projecthuddle/v2/media/1379"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://example.org/wp-json/wp/v2/media?parent=1468"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
+```
 
 **Parameters**
 
@@ -3027,6 +4620,130 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup-image`
+
+```javascript
+const form = new FormData();
+form.append("title", "A new title for new mockup image");
+form.append("type", "image");
+form.append("parent_id", "180");
+form.append("file", "image.jpg");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://example.org/wp-json/projecthuddle/v2/mockup-image', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1478,
+  "date": "2022-04-26T15:38:59",
+  "date_gmt": "2022-04-26T10:08:59",
+  "modified": "2022-04-26T15:38:59",
+  "modified_gmt": "2022-04-26T10:08:59",
+  "password": "",
+  "slug": "a-new-title-for-new-mockup-image-2",
+  "status": "publish",
+  "type": "image",
+  "link": "https://example.org/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#a-new-title-for-new-mockup-image-2",
+  "title": {
+    "raw": "A new title for new mockup image",
+    "rendered": "A new title for new mockup image"
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 180,
+  "model_type": "image",
+  "current_version": 1,
+  "sketch_id": "",
+  "options": {
+    "alignment": "center",
+    "size": "normal",
+    "background_color": "#222",
+    "background_image": "",
+    "background_image_position": "http://center"
+  },
+  "approved": false,
+  "approval_data": {
+    "by": false,
+    "on": false
+  },
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "is_private": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1478"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/types/project_image"
+      }
+    ],
+    "versions": [
+      {
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup-image/1478/versions"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/comments?post=1478&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://example.org/wp-json/projecthuddle/v2/mockup/180"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://example.org/wp-json/wp/v2/media?parent=1478"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -3069,6 +4786,125 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/mockup-image/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1468,
+  "date": "2022-04-26T15:17:44",
+  "date_gmt": "2022-04-26T09:47:44",
+  "modified": "2022-04-26T15:41:16",
+  "modified_gmt": "2022-04-26T10:11:16",
+  "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "status": "publish",
+  "type": "image",
+  "link": "https://bsf.ddev.site/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "title": {
+    "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
+  },
+  "excerpt": {
+    "rendered": "",
+    "protected": false
+  },
+  "featured_media": 1379,
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 180,
+  "model_type": "image",
+  "current_version": "2",
+  "sketch_id": "",
+  "ph_short_link": "https://bsf.ddev.site/?p=1468",
+  "options": {
+    "alignment": "center",
+    "size": "scale",
+    "background_color": "#15181C",
+    "background_image": "",
+    "background_image_position": "http://center"
+  },
+  "approved": false,
+  "approval_data": {
+    "by": false,
+    "on": false
+  },
+  "resolve_status": {
+    "total": 1,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "is_private": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+      }
+    ],
+    "versions": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1379"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1468"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -3090,6 +4926,134 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup-image/{id}`
+
+```javascript
+const form = new FormData();
+form.append("title", "Changed the title");
+form.append("parent_id", "180");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1468,
+  "date": "2022-04-26T15:17:44",
+  "date_gmt": "2022-04-26T09:47:44",
+  "modified": "2022-05-01T18:14:06",
+  "modified_gmt": "2022-05-01T12:44:06",
+  "password": "",
+  "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "status": "publish",
+  "type": "image",
+  "link": "https://bsf.ddev.site/mockup/huddle-mock/?access_token=ce635f81fd0b4c77decf759a9919deec#2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "title": {
+    "raw": "Changed the title",
+    "rendered": "Changed the title"
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "featured_media": 1379,
+  "parent": 0,
+  "menu_order": 0,
+  "meta": {
+  },
+  "parent_id": 180,
+  "model_type": "image",
+  "current_version": "2",
+  "sketch_id": "",
+  "options": {
+    "alignment": "center",
+    "size": "scale",
+    "background_color": "#15181C",
+    "background_image": "",
+    "background_image_position": "http://center"
+  },
+  "approved": false,
+  "approval_data": {
+    "by": false,
+    "on": false
+  },
+  "resolve_status": {
+    "total": 1,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "is_private": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+      }
+    ],
+    "versions": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1468&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1379"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1468"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -3131,6 +5095,121 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `DELETE /projecthuddle/v2/mockup-image/{id}`
 
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1478,
+  "date": "2022-04-26T15:38:59",
+  "date_gmt": "2022-04-26T10:08:59",
+  "modified": "2022-05-01T18:18:53",
+  "modified_gmt": "2022-05-01T12:48:53",
+  "password": "",
+  "slug": "a-new-title-for-new-mockup-image-2__trashed",
+  "status": "trash",
+  "type": "image",
+  "link": "https://bsf.ddev.site/?post_type=project_image&p=1478&access_token=ce635f81fd0b4c77decf759a9919deec",
+  "title": {
+    "raw": "A new title for new mockup image",
+    "rendered": "A new title for new mockup image"
+  },
+  "excerpt": {
+    "raw": "",
+    "rendered": "",
+    "protected": false
+  },
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 1,
+  "meta": {
+  },
+  "parent_id": 180,
+  "model_type": "image",
+  "current_version": "1",
+  "sketch_id": "",
+  "options": {
+    "alignment": "center",
+    "size": "normal",
+    "background_color": "#222",
+    "background_image": "",
+    "background_image_position": "http://center"
+  },
+  "approved": false,
+  "approval_data": {
+    "by": false,
+    "on": false
+  },
+  "resolve_status": {
+    "total": 0,
+    "approved": 0,
+    "resolved": 0,
+    "by": false,
+    "on": false
+  },
+  "is_private": false,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+      }
+    ],
+    "versions": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1478/versions"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1478&per_page=5&type=approval"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1478"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name  | Located in | Description                                 | Required | Type    |
@@ -3153,6 +5232,138 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/mockup-image/{parent}/versions`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+  {
+    "id": 1474,
+    "date": "2022-04-26T10:28:25",
+    "date_gmt": "2022-04-26T04:58:25",
+    "modified": "2022-04-26T10:28:25",
+    "modified_gmt": "2022-04-26T04:58:25",
+    "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+    "status": "publish",
+    "type": "image",
+    "link": "https://bsf.ddev.site/?post_type=ph_version&p=1474&access_token=b0f06bae8adc6cd0e18adf74b67b7977",
+    "title": {
+      "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1335,
+    "parent": 1468,
+    "menu_order": 0,
+    "meta": {
+    },
+    "parent_id": 180,
+    "model_type": "image_version",
+    "current_version": "1",
+    "sketch_id": "",
+    "ph_short_link": "https://bsf.ddev.site/?p=1474",
+    "options": {
+      "alignment": "center",
+      "size": "scale",
+      "background_color": "#15181C",
+      "background_image": "",
+      "background_image_position": "http://center"
+    },
+    "approved": false,
+    "approval_data": {
+      "by": false,
+      "on": false
+    },
+    "resolve_status": {
+      "total": 0,
+      "approved": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "is_private": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1474"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/project_image"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1474"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1474"
+        }
+      ],
+      "version-history": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/1474/revisions"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/media/1335"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1474"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
+```
 
 **Parameters**
 
@@ -3177,6 +5388,49 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/mockup-image/{parent}/versions/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "author": 16,
+  "featured_media": 1335,
+  "date": "2022-04-26T10:28:25",
+  "date_gmt": "2022-04-26T04:58:25",
+  "id": 1474,
+  "modified": "2022-04-26T10:28:25",
+  "modified_gmt": "2022-04-26T04:58:25",
+  "parent": 1468,
+  "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+  "title": {
+    "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
+  },
+  "excerpt": {
+    "rendered": ""
+  },
+  "_links": {
+    "parent": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name    | Located in | Description                                                                   | Required | Type    |
@@ -3199,6 +5453,45 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `DELETE /projecthuddle/v2/mockup-image/{parent}/versions/{id}`
+
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468/versions/1474?force=true', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "deleted": true,
+  "previous": {
+    "author": 16,
+    "featured_media": 1335,
+    "date": "2022-04-26T10:28:25",
+    "date_gmt": "2022-04-26T04:58:25",
+    "id": 1474,
+    "modified": "2022-04-26T10:28:25",
+    "modified_gmt": "2022-04-26T04:58:25",
+    "parent": 1468,
+    "slug": "2b69413a-9d67-3b07-a5d2-96a772fe4779",
+    "title": {
+      "rendered": "b023d4a0-e453-329b-b55a-0dc4bd4c938e"
+    },
+    "excerpt": {
+      "rendered": ""
+    }
+  }
+}
+```
 
 **Parameters**
 
@@ -3224,6 +5517,411 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/mockup-thread`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+  {
+    "id": 1510,
+    "date": "2022-05-01T19:24:21",
+    "date_gmt": "2022-05-01T13:54:21",
+    "modified": "2022-05-01T19:24:21",
+    "modified_gmt": "2022-05-01T13:54:21",
+    "slug": "content-is-static",
+    "status": "publish",
+    "type": "ph_comment_location",
+    "link": "https://bsf.ddev.site/mockup-comment/1510/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "title": {
+      "rendered": "content is static"
+    },
+    "content": {
+      "rendered": "<p>content is static</p>",
+      "protected": false
+    },
+    "author": 16,
+    "parent": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1469,
+    "project_id": 180,
+    "model_type": "mockup-thread",
+    "members": [
+      16,
+      17,
+      22
+    ],
+    "relativeX": 0.40198321891686001,
+    "relativeY": 0.14302059496568001,
+    "resolved": false,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://bsf.ddev.site/?p=1510",
+    "project_name": "Huddle Mock",
+    "item_name": "Fruits basket",
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1510"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1510"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1510"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1469"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1510"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1509,
+    "date": "2022-05-01T19:24:17",
+    "date_gmt": "2022-05-01T13:54:17",
+    "modified": "2022-05-01T19:24:17",
+    "modified_gmt": "2022-05-01T13:54:17",
+    "slug": "comment-threads-are-comments",
+    "status": "publish",
+    "type": "ph_comment_location",
+    "link": "https://bsf.ddev.site/mockup-comment/1509/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "title": {
+      "rendered": "comment threads are comments"
+    },
+    "content": {
+      "rendered": "<p>comment threads are comments</p>",
+      "protected": false
+    },
+    "author": 16,
+    "parent": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1469,
+    "project_id": 180,
+    "model_type": "mockup-thread",
+    "members": [
+      16,
+      17,
+      22
+    ],
+    "relativeX": 0.24485125858123999,
+    "relativeY": 0.27231121281464998,
+    "resolved": false,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://bsf.ddev.site/?p=1509",
+    "project_name": "Huddle Mock",
+    "item_name": "Fruits basket",
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1509"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1509"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1509"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1469"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1509"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1507,
+    "date": "2022-05-01T19:23:41",
+    "date_gmt": "2022-05-01T13:53:41",
+    "modified": "2022-05-01T19:23:41",
+    "modified_gmt": "2022-05-01T13:53:41",
+    "slug": "just-another-comment",
+    "status": "publish",
+    "type": "ph_comment_location",
+    "link": "https://bsf.ddev.site/mockup-comment/1507/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "title": {
+      "rendered": "just another comment"
+    },
+    "content": {
+      "rendered": "<p>just another comment</p>",
+      "protected": false
+    },
+    "author": 16,
+    "parent": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1468,
+    "project_id": 180,
+    "model_type": "mockup-thread",
+    "members": [
+      16,
+      17,
+      22
+    ],
+    "relativeX": 0.38374291115311998,
+    "relativeY": 0.12907801418439999,
+    "resolved": false,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://bsf.ddev.site/?p=1507",
+    "project_name": "Huddle Mock",
+    "item_name": "The city view",
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1507"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1507"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1507"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1507"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1480,
+    "date": "2022-04-26T17:56:03",
+    "date_gmt": "2022-04-26T12:26:03",
+    "modified": "2022-04-26T17:56:03",
+    "modified_gmt": "2022-04-26T12:26:03",
+    "slug": "another-one-comment",
+    "status": "publish",
+    "type": "ph_comment_location",
+    "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
+    "title": {
+      "rendered": "another one comment"
+    },
+    "content": {
+      "rendered": "<p>another one comment</p>",
+      "protected": false
+    },
+    "author": 16,
+    "parent": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "meta": {
+    },
+    "parent_id": 1468,
+    "project_id": 180,
+    "model_type": "mockup-thread",
+    "members": [
+      16,
+      17,
+      22
+    ],
+    "relativeX": 0.22306238185255001,
+    "relativeY": 0.14042553191488999,
+    "resolved": false,
+    "assigned": 0,
+    "comments": [
+
+    ],
+    "comments_count": 1,
+    "activity_count": 1,
+    "ph_short_link": "https://bsf.ddev.site/?p=1480",
+    "project_name": "Huddle Mock",
+    "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        }
+      ],
+      "comments": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
+```
 
 **Parameters**
 
@@ -3261,6 +5959,141 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup-thread`
+
+```javascript
+const form = new FormData();
+form.append("title", "API comment");
+form.append("content", "comment from api");
+form.append("parent_id", "1468");
+form.append("author", "16");
+form.append("relativeX", "0.2");
+form.append("relativeY", "0.5");
+form.append("comment_status", "open");
+form.append("status", "publish");
+form.append("assigned", "20");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example
+
+```json
+{
+  "id": 1516,
+  "date": "2022-05-01T19:52:35",
+  "date_gmt": "2022-05-01T14:22:35",
+  "modified": "2022-05-01T19:52:35",
+  "modified_gmt": "2022-05-01T14:22:35",
+  "password": "",
+  "slug": "api-comment-4",
+  "status": "publish",
+  "type": "ph_comment_location",
+  "link": "https://bsf.ddev.site/mockup-comment/1516/?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "title": {
+    "raw": "API comment",
+    "rendered": "API comment"
+  },
+  "content": {
+    "raw": "comment from api",
+    "rendered": "No comment text",
+    "protected": false
+  },
+  "author": 16,
+  "parent": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1468,
+  "project_id": 180,
+  "model_type": "mockup-thread",
+  "members": [
+
+  ],
+  "relativeX": 0.20000000000000001,
+  "relativeY": 0.5,
+  "resolved": false,
+  "assigned": 20,
+  "comments": [
+
+  ],
+  "comments_count": 0,
+  "activity_count": 0,
+  "project_name": "Huddle Mock",
+  "item_name": "The city view",
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1516"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1516"
+      }
+    ],
+    "assigned": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/20"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1516"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1516"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -3300,6 +6133,135 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/mockup-thread/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1480,
+  "date": "2022-04-26T17:56:03",
+  "date_gmt": "2022-04-26T12:26:03",
+  "modified": "2022-04-26T17:56:03",
+  "modified_gmt": "2022-04-26T12:26:03",
+  "slug": "jus-a-comment",
+  "status": "publish",
+  "type": "ph_comment_location",
+  "link": "https://bsf.ddev.site/mockup-comment/1480/",
+  "title": {
+    "rendered": "jus a comment"
+  },
+  "content": {
+    "rendered": "<p>jus a comment</p>",
+    "protected": false
+  },
+  "author": 16,
+  "parent": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "default",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": ""
+  },
+  "parent_id": 1468,
+  "project_id": 180,
+  "model_type": "mockup-thread",
+  "members": [
+
+  ],
+  "relativeX": 0.22306238185255001,
+  "relativeY": 0.14042553191488999,
+  "resolved": false,
+  "assigned": 0,
+  "comments": [
+
+  ],
+  "comments_count": 1,
+  "activity_count": 1,
+  "ph_short_link": "https://bsf.ddev.site/?p=1480",
+  "project_name": "Huddle Mock",
+  "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -3321,6 +6283,196 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/mockup-thread/{id}`
+
+```javascript
+const form = new FormData();
+form.append("content", "just changed the content");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1480,
+  "date": "2022-04-26T17:56:03",
+  "date_gmt": "2022-04-26T12:26:03",
+  "modified": "2022-05-01T20:13:34",
+  "modified_gmt": "2022-05-01T14:43:34",
+  "password": "",
+  "slug": "just-a-comment",
+  "status": "publish",
+  "type": "ph_comment_location",
+  "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "title": {
+    "raw": "just changed the content",
+    "rendered": "just changed the content"
+  },
+  "content": {
+    "raw": "just changed the content",
+    "rendered": "<p>just changed the content</p>",
+    "protected": false
+  },
+  "author": 16,
+  "parent": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1468,
+  "project_id": 180,
+  "model_type": "mockup-thread",
+  "members": [
+    16,
+    17,
+    22
+  ],
+  "relativeX": 0.22306238185255001,
+  "relativeY": 0.14042553191488999,
+  "resolved": false,
+  "assigned": 0,
+  "comments": [
+    {
+      "id": 172,
+      "post": 1480,
+      "parent": 0,
+      "author": 16,
+      "author_name": "john",
+      "author_url": "",
+      "date": "2022-04-26T17:56:04",
+      "date_gmt": "2022-04-26T12:26:04",
+      "content": {
+        "rendered": "<p>just changed the content</p>"
+      },
+      "link": "https://bsf.ddev.site/mockup-comment/1480/?access_token=ce635f81fd0b4c77decf759a9919deec/",
+      "status": "approved",
+      "type": "ph_comment",
+      "project_id": 180,
+      "item_id": 1468,
+      "author_avatar_urls": {
+        "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+        "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+        "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+      },
+      "meta": [
+
+      ],
+      "comment_post_type": "thread",
+      "approval": false,
+      "is_private": false,
+      "_links": {
+        "self": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments/172"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://bsf.ddev.site/wp-json/wp/v2/users/16"
+          }
+        ],
+        "up": [
+          {
+            "embeddable": true,
+            "post_type": "ph_comment_location",
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+          }
+        ],
+        "item": [
+          {
+            "embeddable": true,
+            "post_type": "mockup-image",
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+          }
+        ],
+        "project": [
+          {
+            "embeddable": true,
+            "post_type": "mockup",
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup/180"
+          }
+        ]
+      }
+    }
+  ],
+  "comments_count": 1,
+  "activity_count": 1,
+  "project_name": "Huddle Mock",
+  "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -3359,6 +6511,123 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `DELETE /projecthuddle/v2/mockup-thread/{id}`
 
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1480,
+  "date": "2022-04-26T17:56:03",
+  "date_gmt": "2022-04-26T12:26:03",
+  "modified": "2022-05-01T20:17:11",
+  "modified_gmt": "2022-05-01T14:47:11",
+  "password": "",
+  "slug": "just-a-comment__trashed",
+  "status": "trash",
+  "type": "ph_comment_location",
+  "link": "https://bsf.?access_token=ce635f81fd0b4c77decf759a9919deec",
+  "title": {
+    "raw": "just changed the content",
+    "rendered": "just changed the content"
+  },
+  "content": {
+    "raw": "just changed the content",
+    "rendered": "just changed the content",
+    "protected": false
+  },
+  "author": 16,
+  "parent": 0,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "meta": {
+  },
+  "parent_id": 1468,
+  "project_id": 180,
+  "model_type": "mockup-thread",
+  "members": [
+    16,
+    17,
+    22
+  ],
+  "relativeX": 0.22306238185255001,
+  "relativeY": 0.14042553191488999,
+  "resolved": false,
+  "assigned": 0,
+  "comments": [
+
+  ],
+  "comments_count": 0,
+  "activity_count": 0,
+  "project_name": "Huddle Mock",
+  "item_name": "b023d4a0-e453-329b-b55a-0dc4bd4c938e",
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread/1480"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-thread"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph_comment_location"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "comments": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1480"
+      }
+    ],
+    "up": [
+      {
+        "embeddable": false,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/mockup-image/1468"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1480"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name  | Located in | Description                                 | Required | Type    |
@@ -3381,6 +6650,316 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/website`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+  {
+    "id": 1503,
+    "date": "2022-04-28T19:12:29",
+    "date_gmt": "2022-04-28T13:42:29",
+    "modified": "2022-04-28T19:12:37",
+    "modified_gmt": "2022-04-28T13:42:37",
+    "slug": "https-curlslope-s2-tastewp-com-wp-admin",
+    "status": "publish",
+    "type": "ph-website",
+    "link": "https://bsf.ddev.site/website/https-curlslope-s2-tastewp-com-wp-admin/?access_token=dd1e54352aec6e3728ea71f7008c0c2c",
+    "title": {
+      "rendered": "https://curlslope.s2-tastewp.com/wp-admin"
+    },
+    "author": 16,
+    "parent": 0,
+    "meta": {
+
+    },
+    "model_type": "website",
+    "me": {
+      "id": 16,
+      "username": "john",
+      "name": "john",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@gmail.com",
+      "url": "",
+      "description": "",
+      "link": "https://bsf.ddev.site/author/john/",
+      "locale": "en_US",
+      "nickname": "john",
+      "slug": "john",
+      "roles": [
+        "administrator"
+      ],
+      "user_role": "Administrator",
+      "registered_date": "2022-04-10T16:45:42+00:00",
+      "capabilities": {
+
+      },
+      "extra_capabilities": {
+        "administrator": true
+      },
+      "avatar_urls": {
+        "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+        "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+        "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+      },
+      "meta": [
+
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+          }
+        ]
+      }
+    },
+    "ph_short_link": "https://bsf.ddev.site/?p=1503",
+    "website_url": "https://curlslope.s2-tastewp.com",
+    "pages": [
+
+    ],
+    "allow_guests": false,
+    "force_login": false,
+    "thread_subscribers": "all",
+    "project_approval": false,
+    "project_unapproval": true,
+    "webhook": "",
+    "ph_installed": true,
+    "child_site": "",
+    "child_plugin_installed": "",
+    "access_token": "dd1e54352aec6e3728ea71f7008c0c2c",
+    "project_members": [
+      16
+    ],
+    "resolve_status": {
+      "total": 0,
+      "resolved": 0
+    },
+    "items_status": {
+      "total": 0,
+      "approved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "comment_scroll": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1503"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "members": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16&per_page=100"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1503&per_page=5&type=approval"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1503"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1427,
+    "date": "2022-04-19T21:15:49",
+    "date_gmt": "2022-04-19T15:45:49",
+    "modified": "2022-04-27T12:31:22",
+    "modified_gmt": "2022-04-27T07:01:22",
+    "slug": "1427",
+    "status": "publish",
+    "type": "ph-website",
+    "link": "https://bsf.ddev.site/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "https://funola.com/"
+    },
+    "author": 16,
+    "parent": 0,
+    "meta": {
+
+    },
+    "model_type": "website",
+    "me": {
+      "id": 16,
+      "username": "john",
+      "name": "john",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@gmail.com",
+      "url": "",
+      "description": "",
+      "link": "https://bsf.ddev.site/author/john/",
+      "locale": "en_US",
+      "nickname": "john",
+      "slug": "john",
+      "roles": [
+        "administrator"
+      ],
+      "user_role": "Administrator",
+      "registered_date": "2022-04-10T16:45:42+00:00",
+      "capabilities": {
+
+      },
+      "extra_capabilities": {
+        "administrator": true
+      },
+      "avatar_urls": {
+        "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+        "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+        "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+      },
+      "meta": [
+
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+          }
+        ]
+      }
+    },
+    "ph_short_link": "https://bsf.ddev.site/?p=1427",
+    "website_url": "https://funola.com",
+    "pages": [
+
+    ],
+    "allow_guests": false,
+    "force_login": false,
+    "thread_subscribers": "all",
+    "project_approval": false,
+    "project_unapproval": true,
+    "webhook": "",
+    "ph_installed": true,
+    "child_site": "",
+    "child_plugin_installed": "",
+    "access_token": "87e63af5cb8f4262a8f44e8842341b99",
+    "project_members": [
+      16,
+      17,
+      18,
+      21,
+      23,
+      24
+    ],
+    "resolve_status": {
+      "total": 6,
+      "resolved": 0
+    },
+    "items_status": {
+      "total": 0,
+      "approved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "comment_scroll": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "members": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+]
+```
 
 **Parameters**
 
@@ -3419,6 +6998,178 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `POST /projecthuddle/v2/website`
 
+```javascript
+const form = new FormData();
+form.append("website_url", "https://rapidblade.com");
+form.append("title", "Rest API website");
+form.append("access_link_login", "true");
+form.append("project_members", "16, 20");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1596,
+  "date": "2022-05-03T17:10:46",
+  "date_gmt": "2022-05-03T11:40:46",
+  "modified": "2022-05-03T17:10:46",
+  "modified_gmt": "2022-05-03T11:40:46",
+  "password": "",
+  "slug": "rest-api-website",
+  "status": "publish",
+  "type": "ph-website",
+  "link": "https://bsf.ddev.site/website/rest-api-website/?access_token=75867dcfe8b32bf84a969e0c0411c7b8",
+  "title": {
+    "raw": "Rest API website",
+    "rendered": "Rest API website"
+  },
+  "author": 16,
+  "parent": 0,
+  "meta": {
+
+  },
+  "model_type": "website",
+  "me": {
+    "id": 16,
+    "username": "john",
+    "name": "john",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe@gmail.com",
+    "url": "",
+    "description": "",
+    "link": "https://bsf.ddev.site/author/john/",
+    "locale": "en_US",
+    "nickname": "john",
+    "slug": "john",
+    "roles": [
+      "administrator"
+    ],
+    "user_role": "Administrator",
+    "registered_date": "2022-04-10T16:45:42+00:00",
+    "capabilities": {
+
+    },
+    "extra_capabilities": {
+      "administrator": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "website_url": "https://rapidblade.com",
+  "pages": [
+
+  ],
+  "allow_guests": false,
+  "force_login": false,
+  "thread_subscribers": "all",
+  "project_approval": false,
+  "project_unapproval": true,
+  "webhook": "",
+  "ph_installed": false,
+  "child_site": "",
+  "child_plugin_installed": "",
+  "access_token": "75867dcfe8b32bf84a969e0c0411c7b8",
+  "project_members": [
+    16,
+    20
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "comment_scroll": null,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1596"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name              | Located in | Description                                                   | Required | Type     |
@@ -3455,6 +7206,134 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `GET /projecthuddle/v2/website/{id}`
 
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1427,
+  "date": "2022-04-19T21:15:49",
+  "date_gmt": "2022-04-19T15:45:49",
+  "modified": "2022-04-27T12:31:22",
+  "modified_gmt": "2022-04-27T07:01:22",
+  "slug": "1427",
+  "status": "publish",
+  "type": "ph-website",
+  "link": "https://bsf.ddev.site/website/1427/",
+  "title": {
+    "rendered": "https://funola.com/"
+  },
+  "author": 16,
+  "parent": 0,
+  "meta": {
+
+  },
+  "model_type": "website",
+  "me": {
+    "code": "rest_not_logged_in",
+    "message": "You are not currently logged in.",
+    "data": {
+      "status": 401
+    }
+  },
+  "ph_short_link": "https://bsf.ddev.site/?p=1427",
+  "website_url": "https://funola.com",
+  "pages": [
+
+  ],
+  "allow_guests": false,
+  "force_login": false,
+  "thread_subscribers": "all",
+  "project_approval": false,
+  "project_unapproval": true,
+  "webhook": "",
+  "ph_installed": true,
+  "child_site": "",
+  "child_plugin_installed": "",
+  "access_token": "",
+  "project_members": [
+    16,
+    17,
+    18,
+    21,
+    23,
+    24
+  ],
+  "resolve_status": {
+    "total": 6,
+    "resolved": 0
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "comment_scroll": null,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,17,18,21,23,24&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name     | Located in | Description                                                                   | Required | Type    |
@@ -3476,6 +7355,175 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `POST /projecthuddle/v2/website/{id}`
+
+```javascript
+const form = new FormData();
+form.append("project_members", "20, 22");
+
+const options = {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN',
+    'content-type': 'multipart/form-data'
+  }
+};
+
+options.body = form;
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1427,
+  "date": "2022-04-19T21:15:49",
+  "date_gmt": "2022-04-19T15:45:49",
+  "modified": "2022-05-03T18:31:36",
+  "modified_gmt": "2022-05-03T13:01:36",
+  "password": "",
+  "slug": "1427",
+  "status": "publish",
+  "type": "ph-website",
+  "link": "https://bsf.ddev.site/website/1427/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+  "title": {
+    "raw": "https://funola.com/",
+    "rendered": "https://funola.com/"
+  },
+  "author": 16,
+  "parent": 0,
+  "meta": {
+
+  },
+  "model_type": "website",
+  "me": {
+    "id": 16,
+    "username": "john",
+    "name": "john",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe@gmail.com",
+    "url": "",
+    "description": "",
+    "link": "https://bsf.ddev.site/author/john/",
+    "locale": "en_US",
+    "nickname": "john",
+    "slug": "john",
+    "roles": [
+      "administrator"
+    ],
+    "user_role": "Administrator",
+    "registered_date": "2022-04-10T16:45:42+00:00",
+    "capabilities": {
+
+    },
+    "extra_capabilities": {
+      "administrator": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "website_url": "https://funola.com",
+  "pages": [
+
+  ],
+  "allow_guests": false,
+  "force_login": false,
+  "thread_subscribers": "all",
+  "project_approval": false,
+  "project_unapproval": true,
+  "webhook": "",
+  "ph_installed": true,
+  "child_site": "",
+  "child_plugin_installed": "",
+  "access_token": "87e63af5cb8f4262a8f44e8842341b99",
+  "project_members": [
+    20,
+    22
+  ],
+  "resolve_status": {
+    "total": 6,
+    "resolved": 0
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "comment_scroll": null,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=20,22&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1427&per_page=5&type=approval"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1427"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
 
 **Parameters**
 
@@ -3512,6 +7560,169 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 
 `DELETE /projecthuddle/v2/website/{id}`
 
+```javascript
+const options = {
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+{
+  "id": 1596,
+  "date": "2022-05-03T17:10:46",
+  "date_gmt": "2022-05-03T11:40:46",
+  "modified": "2022-05-03T18:50:03",
+  "modified_gmt": "2022-05-03T13:20:03",
+  "password": "",
+  "slug": "rest-api-website__trashed",
+  "status": "trash",
+  "type": "ph-website",
+  "link": "https://bsf.ddev.site/?post_type=ph-website&p=1596&access_token=75867dcfe8b32bf84a969e0c0411c7b8",
+  "title": {
+    "raw": "Rest API website",
+    "rendered": "Rest API website"
+  },
+  "author": 16,
+  "parent": 0,
+  "meta": {
+
+  },
+  "model_type": "website",
+  "me": {
+    "id": 16,
+    "username": "john",
+    "name": "john",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "johndoe@gmail.com",
+    "url": "",
+    "description": "",
+    "link": "https://bsf.ddev.site/author/john/",
+    "locale": "en_US",
+    "nickname": "john",
+    "slug": "john",
+    "roles": [
+      "administrator"
+    ],
+    "user_role": "Administrator",
+    "registered_date": "2022-04-10T16:45:42+00:00",
+    "capabilities": {
+
+    },
+    "extra_capabilities": {
+      "administrator": true
+    },
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/884e294ade6d1ad5a6d8f95e9fae37dd?s=96&d=mm&r=g"
+    },
+    "meta": [
+
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users"
+        }
+      ]
+    }
+  },
+  "website_url": "https://rapidblade.com",
+  "pages": [
+
+  ],
+  "allow_guests": false,
+  "force_login": false,
+  "thread_subscribers": "all",
+  "project_approval": false,
+  "project_unapproval": true,
+  "webhook": "",
+  "ph_installed": false,
+  "child_site": "",
+  "child_plugin_installed": "",
+  "access_token": "75867dcfe8b32bf84a969e0c0411c7b8",
+  "project_members": [
+    16,
+    20
+  ],
+  "resolve_status": {
+    "total": 0,
+    "resolved": 0
+  },
+  "items_status": {
+    "total": 0,
+    "approved": 0,
+    "by": false,
+    "on": false
+  },
+  "approved": false,
+  "comment_scroll": null,
+  "_links": {
+    "self": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1596"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-website"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users/16"
+      }
+    ],
+    "members": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/users?include=16,20&per_page=100"
+      }
+    ],
+    "approval_history": [
+      {
+        "embeddable": true,
+        "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1596&per_page=5&type=approval"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1596"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
+```
+
 **Parameters**
 
 | Name  | Located in | Description                                 | Required | Type    |
@@ -3534,6 +7745,177 @@ fetch('https://example.org/wp-json/projecthuddle/v2/comments/170', options)
 ### HTTP Request
 
 `GET /projecthuddle/v2/website-page`
+
+```javascript
+const options = {
+  method: 'GET',
+  headers: {
+    Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+  }
+};
+
+fetch('https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+```
+
+> Example of JSON output
+
+```json
+[
+    {
+    "id": 1481,
+    "date": "2022-04-27T09:50:54",
+    "date_gmt": "2022-04-27T04:20:54",
+    "modified": "2022-04-27T09:50:54",
+    "modified_gmt": "2022-04-27T04:20:54",
+    "slug": "huddle-just-another-wordpress-site-2",
+    "status": "publish",
+    "type": "ph-webpage",
+    "link": "https://bsf.dev.site/website-page/huddle-just-another-wordpress-site-2/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "Huddle – Just another WordPress site"
+    },
+    "parent": 0,
+    "menu_order": 0,
+    "meta": {
+
+    },
+    "parent_id": 1427,
+    "model_type": "page",
+    "user_order": [
+
+    ],
+    "ph_short_link": "https://bsf.dev.site/?p=1481",
+    "page_url": "https://huddle.dev.site/",
+    "resolve_status": {
+      "total": 2,
+      "approved": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page/1481"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-webpage"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1481&per_page=5&type=approval"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1481"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1429,
+    "date": "2022-04-20T14:21:02",
+    "date_gmt": "2022-04-20T08:51:02",
+    "modified": "2022-04-20T14:21:02",
+    "modified_gmt": "2022-04-20T08:51:02",
+    "slug": "huddle-just-another-wordpress-site",
+    "status": "publish",
+    "type": "ph-webpage",
+    "link": "https://bsf.ddev.site/website-page/huddle-just-another-wordpress-site/?access_token=87e63af5cb8f4262a8f44e8842341b99",
+    "title": {
+      "rendered": "Huddle – Just another WordPress site"
+    },
+    "parent": 0,
+    "menu_order": 0,
+    "meta": {
+
+    },
+    "parent_id": 1427,
+    "model_type": "page",
+    "user_order": [
+
+    ],
+    "ph_short_link": "https://bsf.ddev.site/?p=1429",
+    "page_url": "https://huddle.ddev.site/",
+    "resolve_status": {
+      "total": 4,
+      "approved": 0,
+      "resolved": 0,
+      "by": false,
+      "on": false
+    },
+    "approved": false,
+    "_links": {
+      "self": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page/1429"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website-page"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/types/ph-webpage"
+        }
+      ],
+      "approval_history": [
+        {
+          "embeddable": true,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/comments?post=1429&per_page=5&type=approval"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": false,
+          "href": "https://bsf.ddev.site/wp-json/projecthuddle/v2/website/1427"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://bsf.ddev.site/wp-json/wp/v2/media?parent=1429"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+]
+```
 
 **Parameters**
 
